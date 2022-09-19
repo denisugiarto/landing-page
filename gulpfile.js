@@ -16,7 +16,7 @@ task('deploy', function () {
 
 //html
 function htmlTemplate() {
-  return src('src/templates/pages/**/*.{html,njk}')
+  return src('src/templates/pages/**/*.html')
     .pipe(nunjucksRender({ path: ['src/templates/components'] }))
     .pipe(dest('dist'));
 }
@@ -36,7 +36,7 @@ function webpImage() {
 }
 
 function images() {
-  return src('src/images/*.{webp}').pipe(dest('dist/assets/images'));
+  return src('src/images/*.webp').pipe(dest('dist/assets/images'));
 }
 
 //svg
@@ -44,19 +44,14 @@ function svgCopy() {
   return src('src/icons/*.svg').pipe(dest('dist/assets/icons'));
 }
 
-//library 
-function libraryCopy() {
-  return src('src/library/**/*.*').pipe(dest('dist/assets/library'));
-}
-
 //create watch task
 function watchTask() {
-  watch('src/templates/**/**/*.{html,njk}', htmlTemplate);
+  watch('src/templates/**/**/*.html', htmlTemplate);
   watch('src/sass/**/*.scss', compilescss);
   watch('src/images/*.{jpg,png}', webpImage);
-  watch('src/images/*.{webp}', images);
+  watch('src/images/*.webp', images);
   watch('src/icons/*.svg', svgCopy);
 }
 
 //default gulp
-exports.default = series(htmlTemplate, compilescss, webpImage, images, svgCopy, libraryCopy, watchTask);
+exports.default = series(htmlTemplate, compilescss, webpImage, images, svgCopy, watchTask);

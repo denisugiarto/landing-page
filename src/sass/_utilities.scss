@@ -1,0 +1,23 @@
+$utilities: (
+  "font-size": (
+    responsive: true,
+    property: font-size,
+    class: fs,
+    values: $font-sizes,
+  ),
+  "rounded": (
+    property: border-radius,
+    class: rounded,
+    values: (
+      null: $border-radius,
+      0: 0,
+      1: 0.3125rem,
+      2: 0.625rem,
+      3: 0.9375rem,
+      4: 1.25rem,
+      5: 1.5625rem,
+      circle: 50%,
+      pill: $border-radius-pill
+    )
+  ),
+);

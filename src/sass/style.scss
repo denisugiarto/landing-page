@@ -1,0 +1,298 @@
+// Configuration and helpers
+@import "variables", "utilities";
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+//Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.category-game {
+  @extend .bg-blue-100;
+  height: 70px;
+
+  &__title {
+    font-size: 20px;
+  }
+}
+
+.game-of-the-week {
+  color: white;
+  margin: 50px;
+  border-radius: 20px;
+  background: linear-gradient(
+    100.45deg,
+    rgba(63, 141, 253, 0.7) 0%,
+    #3f8dfd 100%
+  );
+  padding: 40px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 26px;
+    grid-row-gap: 28px;
+  }
+}
+
+.card-game {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+
+  &__item {
+    @extend .card, .border-0;
+    padding: 30px;
+    border-radius: 20px;
+
+    .game {
+      &-image {
+        @extend .img-fluid, .rounded-4, .h-100;
+        object-fit: cover;
+      }
+
+      &-title {
+        @extend .lh-base;
+        margin-bottom: 10px;
+        font-size: 25px;
+        font-weight: 600;
+      }
+
+      &-viewers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 6px;
+        padding: 5px 10px;
+        gap: 5px;
+        margin-right: 20px;
+        font-size: 13px;
+        color: white;
+
+        &::before {
+          content: "";
+          background-image: url("../icons/ic-views.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 27px;
+          height: 27px;
+        }
+      }
+    }
+
+    .category {
+      &__list {
+        @extend .d-flex, .align-items-center, .gap-2, .mt-6;
+      }
+      &__item {
+        @extend .lh-base;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 10px;
+
+        &--action {
+          background-color: $red;
+        }
+        &--adventure {
+          background-color: $violet;
+        }
+        &--fun {
+          background-color: $orange;
+        }
+        &--galaxy {
+          background-color: $purple;
+        }
+        &--horror {
+          background-color: $gray-500;
+        }
+        &--strategy {
+          background-color: $green;
+        }
+
+        &--more {
+          padding: 0;
+        }
+      }
+    }
+
+    &--first {
+      grid-row: 1 / span 2;
+      max-width: 100%;
+      height: auto;
+      padding: 0;
+
+      .card-game__background {
+        position: relative;
+        display: inline-block;
+        height: 100%;
+
+        img {
+          @extend .card-img;
+          border-radius: 20px;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          display: inline-block;
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0) 0%,
+            #000000 100%
+          );
+          border-radius: 20px;
+        }
+      }
+      .card-game__content {
+        @extend .card-img-overlay;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      .game {
+        &-title {
+          font-size: 30px;
+        }
+
+        &-play-btn {
+          @extend .btn, .btn-primary, .w-100;
+          margin-top: 40px;
+          padding: 16px 0;
+          border-radius: 15px;
+        }
+      }
+    }
+
+    &--transparent {
+      background: rgba(255, 255, 255, 0.1);
+
+      .game {
+        &-title {
+          color: white;
+        }
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, 1);
+
+        .game {
+          &-image::after {
+            content: '';
+            background-image: url("../icons/ic-play.svg");
+          }
+
+          &-title {
+            color: $dark;
+          }
+          &-viewers {
+            @extend .text-blue-200;
+            background: rgba(20, 36, 60, 0.05);
+            border: 1px solid rgba(20, 36, 60, 0.1);
+
+            &::before {
+              background-image: url("../icons/ic-views-active.svg");
+            }
+          }
+        }
+
+        .category {
+          &__item--more {
+            @extend .text-blue-200;
+          }
+        }
+      }
+    }
+  }
+}
+
+.header {
+  @extend .navbar, .navbar-expand-lg;
+  height: 90px;
+  padding: 0 30px;
+
+  &__sign-up {
+    @extend .text-primary;
+  }
+
+  &__site-search {
+    @extend .form-control, .rounded-5;
+    width: 455px;
+    margin-left: 55px;
+  }
+
+  &__login {
+    @extend .btn, .btn-primary, .rounded-pill;
+  }
+}
+
+.hero {
+  @extend .text-center, .text-white;
+  background-image: linear-gradient(87.21deg, #3d4e68 0%, #0cdd92 100%),
+    url("../images/img-bg2.webp");
+  padding: 35px 0;
+  opacity: 0.9;
+  border-radius: 20px;
+  margin: 40px;
+
+  &__action-button {
+    @extend .btn, .btn-light, .text-primary;
+    font-size: 14px;
+    padding: 14px 18px;
+    font-weight: 700;
+    border-radius: 10px;
+
+    img {
+      margin-left: 13px;
+    }
+  }
+
+  &__description {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 41px;
+  }
+
+  &__heading {
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 69px;
+    margin-bottom: 5px;
+  }
+}
+
+.page-menu {
+  @extend .bg-dark, .d-flex, .align-items-center, .justify-content-center;
+  height: 60px;
+  gap: 40px;
+
+  &__item {
+    @extend .text-secondary;
+
+    &--dropdown {
+      @extend .dropdown-toggle;
+    }
+  }
+}

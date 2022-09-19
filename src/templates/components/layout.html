@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include "./head.html" %}
+  <body>
+    {% block content %} {% endblock %} {% include "./footer.html" %}
+    <script>
+      var dropdownElementList = [].slice.call(
+        document.querySelectorAll(".dropdown-toggle")
+      );
+      var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+        return new bootstrap.Dropdown(dropdownToggleEl);
+      });
+    </script>
+  </body>
+</html>

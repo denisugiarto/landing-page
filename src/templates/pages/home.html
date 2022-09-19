@@ -1,0 +1,237 @@
+{% import '../components/cards.html' as card %} {% extends
+'../components/layout.html' %} {% set pageTitle = "Home Page" %} {% block
+content %}
+<main>
+  <div class="header">
+    <div class="header__brand">
+      <img src="./assets/icons/ic-brand.svg" alt="" />
+    </div>
+    <form>
+      <input
+        type="search"
+        class="header__site-search"
+        name=""
+        id=""
+        placeholder="Search..."
+      />
+    </form>
+    <div class="ms-auto">
+      <a role="button" href="" class="header__sign-up me-4">Sign Up</a>
+      <a role="button" href="" class="header__login">LOGIN</a>
+    </div>
+  </div>
+  <div class="page-menu">
+    <a href="" class="page-menu__item">Top Player</a>
+    <div class="page-menu__item">
+      <a
+        href=""
+        class="page-menu__item--dropdown"
+        data-bs-toggle="dropdown"
+        id="arcadeDropdown"
+      >
+        Arcade
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="arcadeDropdown">
+        <li><a class="dropdown-item" href="">Arcade 1</a></li>
+        <li><a class="dropdown-item" href="">Arcade 2</a></li>
+      </ul>
+    </div>
+    <div class="page-menu__item">
+      <a
+        id="clickerDropdown"
+        href=""
+        class="page-menu__item--dropdown"
+        data-bs-toggle="dropdown"
+        >Clicker</a
+      >
+      <ul class="dropdown-menu" aria-labelledby="clickerDropdown">
+        <li><a class="dropdown-item" href="">Clicker 1</a></li>
+        <li><a class="dropdown-item" href="">Clicker 2</a></li>
+      </ul>
+    </div>
+    <a href="" class="page-menu__item">Sample Page</a>
+  </div>
+  <div class="category-game d-flex align-items-center px-6">
+    <div class="category-game__title col-auto">Category Game</div>
+    <div
+      class="category-game__list border-start border-dark d-flex flex-nowrap ms-5 ps-3 gap-3 overflow-auto"
+    >
+      {% include "../components/game-category.html" %}
+    </div>
+  </div>
+  <section class="hero">
+    <h1 class="hero__heading">Plan Your Browser</h1>
+    <p class="hero__description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+      fringilla tincidunt purus et condimentum.
+    </p>
+    <button class="hero__action-button">
+      START NOW
+      <img src="./assets/icons/ic-play.svg" alt="" />
+    </button>
+  </section>
+
+  <section class="game-of-the-week">
+    <div class="d-flex justify-content-between align-items-center">
+      <h2 class="fs-2">Game of the Week</h2>
+      <a type="button" class="text-decoration-underline fs-4">See More Game</a>
+    </div>
+    <div class="game-of-the-week__list mt-6">
+      <div class="card-game__item card-game__item--first">
+        <div class="card-game__background">
+          <img src="./assets/images/img-Solo Child on World.webp" alt="" />
+        </div>
+        <div class="card-game__content">
+          <h3 class="game-title">Solo Child on World</h3>
+          <div class="d-flex align-items-center">
+            <div class="game-viewers">22</div>
+            <div class="game-rating">
+              <img src="./assets/icons/ic-stars-true.svg" alt="" />
+              <img src="./assets/icons/ic-stars-true.svg" alt="" />
+              <img src="./assets/icons/ic-stars-true.svg" alt="" />
+              <img src="./assets/icons/ic-stars-true.svg" alt="" />
+              <img src="./assets/icons/ic-stars-true.svg" alt="" />
+            </div>
+          </div>
+          <button class="game-play-btn">PLAY NOW</button>
+        </div>
+      </div>
+
+      <div class="card-game__item card-game__item--transparent">
+        <div class="d-flex gap-4">
+          <div class="col-4">
+            <img
+              src="./assets/images/img-Glowing Orange.webp"
+              alt=""
+              class="game-image"
+            />
+          </div>
+          <div class="card-game__content col-8">
+            <h3 class="game-title">Glowing Orange</h3>
+            <div class="d-flex align-items-center">
+              <div class="game-viewers">22</div>
+              <div class="game-rating">
+                <img src="./assets/icons/ic-stars-true.svg" alt="" />
+                <img src="./assets/icons/ic-stars-true.svg" alt="" />
+                <img src="./assets/icons/ic-stars-true.svg" alt="" />
+                <img src="./assets/icons/ic-stars-true.svg" alt="" />
+                <img src="./assets/icons/ic-stars-false.svg" alt="" />
+              </div>
+            </div>
+            <div class="category__list">
+              <div class="category__item category__item--strategy bg-violet">
+                Adventure
+              </div>
+              <div class="category__item category__item--fun bg-warning">
+                Fun
+              </div>
+              <div class="category__item category__item--more">3+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-game__item card-game__item--transparent">
+        <div class="d-flex gap-4">
+          <div class="col-4">
+            <a href="" role="button">
+              <img
+                src="./assets/images/img-Glowing Orange.webp"
+                alt=""
+                class="game-image"
+              />
+            </a>
+          </div>
+          <div class="card-game__content col-8">
+            <h3 class="game-title">Glowing Orange</h3>
+            <div class="d-flex align-items-center">
+              <div class="game-viewers">22</div>
+              <div class="game-rating">
+                <img src="./assets/icons/ic-stars-true.svg" alt="" />
+                <img src="./assets/icons/ic-stars-true.svg" alt="" />
+                <img src="./assets/icons/ic-stars-true.svg" alt="" />
+                <img src="./assets/icons/ic-stars-true.svg" alt="" />
+                <img src="./assets/icons/ic-stars-false.svg" alt="" />
+              </div>
+            </div>
+            <div class="category__list">
+              <div class="category__item category__item--strategy bg-violet">
+                Adventure
+              </div>
+              <div class="category__item category__item--fun bg-warning">
+                Fun
+              </div>
+              <div class="category__item category__item--more">3+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-game__item card-game__item--transparent">
+        <div class="d-flex gap-4">
+          <div class="col-4">
+            <img
+              src="./assets/images/img-Glowing Orange.webp"
+              alt=""
+              class="game-image"
+            />
+          </div>
+          <div class="card-game__content col-8">
+            <h3 class="game-title">Glowing Orange</h3>
+            <div class="d-flex align-items-center">
+              <div class="game-viewers">22</div>
+              <div class="game-rating">
+                <img src="./assets/icons/ic-stars-true.svg" alt="" />
+                <img src="./assets/icons/ic-stars-true.svg" alt="" />
+                <img src="./assets/icons/ic-stars-true.svg" alt="" />
+                <img src="./assets/icons/ic-stars-true.svg" alt="" />
+                <img src="./assets/icons/ic-stars-false.svg" alt="" />
+              </div>
+            </div>
+            <div class="category__list">
+              <div class="category__item category__item--strategy bg-violet">
+                Adventure
+              </div>
+              <div class="category__item category__item--fun bg-warning">
+                Fun
+              </div>
+              <div class="category__item category__item--more">3+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-game__item card-game__item--transparent">
+        <div class="d-flex gap-4">
+          <div class="col-4">
+            <img
+              src="./assets/images/img-Glowing Orange.webp"
+              alt=""
+              class="game-image"
+            />
+          </div>
+          <div class="card-game__content col-8">
+            <h3 class="game-title">Glowing Orange</h3>
+            <div class="d-flex align-items-center">
+              <div class="game-viewers">22</div>
+              <div class="game-rating">
+                <img src="./assets/icons/ic-stars-true.svg" alt="" />
+                <img src="./assets/icons/ic-stars-true.svg" alt="" />
+                <img src="./assets/icons/ic-stars-true.svg" alt="" />
+                <img src="./assets/icons/ic-stars-true.svg" alt="" />
+                <img src="./assets/icons/ic-stars-false.svg" alt="" />
+              </div>
+            </div>
+            <div class="category__list">
+              <div class="category__item category__item--strategy bg-violet">
+                Adventure
+              </div>
+              <div class="category__item category__item--fun bg-warning">
+                Fun
+              </div>
+              <div class="category__item category__item--more">3+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
