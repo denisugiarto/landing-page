@@ -1185,7 +1185,7 @@ progress {
   width: 16.6666666667%;
 }
 
-.col-auto, .card-game__item--transparent .game__image-wrapper, .category-game__item {
+.col-auto, .card-game__item--transparent .game__image-wrapper {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -1227,7 +1227,7 @@ progress {
   width: 41.66666667%;
 }
 
-.col-6, .card-game__item--first .card-game__content {
+.col-6, .card-game__item--landscape .card-game__content, .card-game__item--transparent .card-game__content {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -1736,7 +1736,7 @@ progress {
     flex: 0 0 auto;
     width: 50%;
   }
-  .col-md-7, .card-game__item--first .card-game__content {
+  .col-md-7, .card-game__item--landscape .card-game__content, .card-game__item--transparent .card-game__content {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
@@ -8889,7 +8889,7 @@ textarea.form-control-lg {
   display: table-cell !important;
 }
 
-.d-flex, .section__header, .page-menu, .footer__copyright-sosmed-wrapper, .footer__sosmed-wrapper, .card-game__item .category__list, .game-of-the-week .section__header, .category-game__item {
+.d-flex, .section__header, .page-menu, .footer__copyright-sosmed-wrapper, .footer__sosmed-wrapper, .card-game__item .category__list, .game-of-the-week .section__header, .category-game__item, .category-game__list {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -9278,7 +9278,7 @@ textarea.form-control-lg {
   flex-shrink: 1 !important;
 }
 
-.flex-wrap, .card-game__item .category__list {
+.flex-wrap, .card-game__item .category__list, .category-game__list {
   -ms-flex-wrap: wrap !important;
   flex-wrap: wrap !important;
 }
@@ -9305,7 +9305,7 @@ textarea.form-control-lg {
   justify-content: flex-end !important;
 }
 
-.justify-content-center, .page-menu {
+.justify-content-center, .page-menu, .category-game__list {
   -webkit-box-pack: center !important;
   -ms-flex-pack: center !important;
   justify-content: center !important;
@@ -10048,7 +10048,7 @@ textarea.form-control-lg {
   gap: 0.5rem !important;
 }
 
-.gap-3 {
+.gap-3, .category-game__list {
   gap: 1rem !important;
 }
 
@@ -14289,7 +14289,7 @@ a {
 }
 
 .category-game {
-  height: 70px;
+  padding: 20px 0;
 }
 .category-game__title {
   font-size: 20px;
@@ -14569,7 +14569,6 @@ a {
 .card-game__item--landscape:hover {
   background-color: #f8f8f8;
 }
-
 .footer__desc {
   font-size: 13px;
 }
@@ -14651,7 +14650,7 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 35px 0;
+  padding: 35px 10px;
   border-radius: 20px;
 }
 .hero__action-button {
@@ -14664,16 +14663,26 @@ a {
   margin-left: 13px;
 }
 .hero__description {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   opacity: 0.7;
   margin-bottom: 41px;
 }
+@media (min-width: 992px) {
+  .hero__description {
+    font-size: 20px;
+  }
+}
 .hero__heading {
-  font-size: 46px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 69px;
   margin-bottom: 5px;
+}
+@media (min-width: 992px) {
+  .hero__heading {
+    font-size: 46px;
+  }
 }
 
 .navbar-mobile__title {

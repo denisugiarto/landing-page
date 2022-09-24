@@ -19,58 +19,84 @@
   <body>
     
 <main>
-  <div class="navbar d-none d-lg-block py-0">
-  <div class="header">
+  <div class="header--mobile d-lg-none sticky-top border-bottom shadow-sm">
+  <div class="header d-flex justify-content-between px-3">
+    <a
+      class="header__menu-icon"
+      role="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasCategoryGames"
+    >
+      <img src="./assets/icons/ic-bars.svg" alt="" />
+    </a>
     <div class="header__brand">
       <img src="./assets/icons/ic-brand.svg" alt="" />
     </div>
-    <input
-      type="search"
-      class="header__site-search"
-      name=""
-      id=""
-      placeholder="Search..."
-    />
-    <div class="ms-auto">
-      <a role="button" href="" class="header__sign-up me-4">Sign Up</a>
-      <a role="button" href="" class="header__login">LOGIN</a>
+    <div
+      class="header__menu-icon"
+      role="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasMenu"
+    >
+      <img src="./assets/icons/ic-ellipsis-vertical.svg" alt="" />
     </div>
   </div>
-  <div class="page-menu">
-    <a href="" class="page-menu__item">Top Player</a>
-    <div class="page-menu__item">
-      <a
-        href=""
-        class="page-menu__item--dropdown"
-        data-bs-toggle="dropdown"
-        id="arcadeDropdown"
-      >
-        Arcade
-      </a>
-      <ul class="dropdown-menu" aria-labelledby="arcadeDropdown">
-        <li><a class="dropdown-item" href="">Arcade 1</a></li>
-        <li><a class="dropdown-item" href="">Arcade 2</a></li>
-      </ul>
+  <!-- category-game brand search and menu -->
+</div>
+<div class="navbar py-0">
+  <div class="d-none d-lg-block">
+    <div class="header">
+      <div class="header__brand">
+        <img src="./assets/icons/ic-brand.svg" alt="" />
+      </div>
+      <input
+        type="search"
+        class="header__site-search"
+        name=""
+        id=""
+        placeholder="Search..."
+      />
+      <div class="ms-auto">
+        <a role="button" href="" class="header__sign-up me-4">Sign Up</a>
+        <a role="button" href="" class="header__login">LOGIN</a>
+      </div>
     </div>
-    <div class="page-menu__item">
-      <a
-        id="clickerDropdown"
-        href=""
-        class="page-menu__item--dropdown"
-        data-bs-toggle="dropdown"
-        >Clicker</a
-      >
-      <ul class="dropdown-menu" aria-labelledby="clickerDropdown">
-        <li><a class="dropdown-item" href="">Clicker 1</a></li>
-        <li><a class="dropdown-item" href="">Clicker 2</a></li>
-      </ul>
+    <div class="page-menu">
+      <a href="" class="page-menu__item">Top Player</a>
+      <div class="page-menu__item">
+        <a
+          href=""
+          class="page-menu__item--dropdown"
+          data-bs-toggle="dropdown"
+          id="arcadeDropdown"
+        >
+          Arcade
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="arcadeDropdown">
+          <li><a class="dropdown-item" href="">Arcade 1</a></li>
+          <li><a class="dropdown-item" href="">Arcade 2</a></li>
+        </ul>
+      </div>
+      <div class="page-menu__item">
+        <a
+          id="clickerDropdown"
+          href=""
+          class="page-menu__item--dropdown"
+          data-bs-toggle="dropdown"
+          >Clicker</a
+        >
+        <ul class="dropdown-menu" aria-labelledby="clickerDropdown">
+          <li><a class="dropdown-item" href="">Clicker 1</a></li>
+          <li><a class="dropdown-item" href="">Clicker 2</a></li>
+        </ul>
+      </div>
+      <a href="" class="page-menu__item">Sample Page</a>
     </div>
-    <a href="" class="page-menu__item">Sample Page</a>
   </div>
   <div class="category-game d-flex align-items-center px-6">
-    <div class="category-game__title col-auto">Category Game</div>
+    <div class="category-game__title col-auto d-none d-lg-block border-end border-dark">Category Game</div>
     <div
-      class="category-game__list border-start border-dark d-flex flex-nowrap ms-5 ps-3 gap-3 overflow-auto"
+      class="category-game__list"
     >
       
 <button
@@ -165,30 +191,7 @@
     </div>
   </div>
 </div>
-<div class="header--mobile d-lg-none sticky-top border-bottom shadow-sm">
-  <div class="header d-flex justify-content-between px-3">
-    <a
-      class="header__menu-icon"
-      role="button"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasCategoryGames"
-    >
-      <img src="./assets/icons/ic-bars.svg" alt="" />
-    </a>
-    <div class="header__brand">
-      <img src="./assets/icons/ic-brand.svg" alt="" />
-    </div>
-    <div
-      class="header__menu-icon"
-      role="button"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasMenu"
-    >
-      <img src="./assets/icons/ic-ellipsis-vertical.svg" alt="" />
-    </div>
-  </div>
-  <!-- category-game brand search and menu -->
-</div>
+
 
 <!-- Offcanvas category -->
 <div
