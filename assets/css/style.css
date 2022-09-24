@@ -677,7 +677,7 @@ progress {
     max-width: 1320px;
   }
 }
-.row, .footer__content {
+.row, .navbar-mobile__game-category, .footer__content {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: -webkit-box;
@@ -689,7 +689,7 @@ progress {
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
-.row > *, .footer__content > * {
+.row > *, .navbar-mobile__game-category > *, .footer__content > * {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 100%;
@@ -1185,7 +1185,7 @@ progress {
   width: 16.6666666667%;
 }
 
-.col-auto, .card-game__item--transparent .game__image-wrapper {
+.col-auto, .card-game__item--transparent .game__image-wrapper, .category-game__item {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -1227,7 +1227,7 @@ progress {
   width: 41.66666667%;
 }
 
-.col-6 {
+.col-6, .card-game__item--first .card-game__content {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -1356,7 +1356,8 @@ progress {
 }
 
 .g-3,
-.gy-3 {
+.gy-3,
+.navbar-mobile__game-category {
   --bs-gutter-y: 1rem;
 }
 
@@ -1735,7 +1736,7 @@ progress {
     flex: 0 0 auto;
     width: 50%;
   }
-  .col-md-7 {
+  .col-md-7, .card-game__item--first .card-game__content {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
@@ -8844,7 +8845,7 @@ textarea.form-control-lg {
   opacity: 1 !important;
 }
 
-.overflow-auto {
+.overflow-auto, .navbar-mobile__game-category {
   overflow: auto !important;
 }
 
@@ -8888,7 +8889,7 @@ textarea.form-control-lg {
   display: table-cell !important;
 }
 
-.d-flex, .section__header, .page-menu, .footer__copyright-sosmed-wrapper, .footer__sosmed-wrapper, .card-game__item .category__list, .game-of-the-week .section__header {
+.d-flex, .section__header, .page-menu, .footer__copyright-sosmed-wrapper, .footer__sosmed-wrapper, .card-game__item .category__list, .game-of-the-week .section__header, .category-game__item {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -9011,7 +9012,7 @@ textarea.form-control-lg {
   border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
 }
 
-.border-0 {
+.border-0, .category-game__item {
   border: 0 !important;
 }
 
@@ -9234,7 +9235,7 @@ textarea.form-control-lg {
   flex-direction: row !important;
 }
 
-.flex-column, .footer__copyright-sosmed-wrapper, .game-of-the-week .section__header {
+.flex-column, .navbar-mobile__game-category, .footer__copyright-sosmed-wrapper, .game-of-the-week .section__header {
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
   -ms-flex-direction: column !important;
@@ -9811,7 +9812,7 @@ textarea.form-control-lg {
   padding-left: 0.25rem !important;
 }
 
-.px-2 {
+.px-2, .category-game__item {
   padding-right: 0.5rem !important;
   padding-left: 0.5rem !important;
 }
@@ -9851,7 +9852,7 @@ textarea.form-control-lg {
   padding-bottom: 0 !important;
 }
 
-.py-1 {
+.py-1, .category-game__item {
   padding-top: 0.25rem !important;
   padding-bottom: 0.25rem !important;
 }
@@ -10236,7 +10237,7 @@ textarea.form-control-lg {
   color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-dark {
+.text-dark, .category-game__item {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
 }
@@ -10251,7 +10252,7 @@ textarea.form-control-lg {
   color: rgba(var(--bs-blue-100-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-blue-200, .card-game__item--transparent:hover .category__item--more, .card-game__item--transparent:hover .game-viewers, .card-game__item .category__item--more {
+.text-blue-200, .card-game__item--transparent:hover .game-viewers {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-blue-200-rgb), var(--bs-text-opacity)) !important;
 }
@@ -10347,7 +10348,7 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-light {
+.bg-light, .category-game__item {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
 }
@@ -10467,7 +10468,7 @@ textarea.form-control-lg {
   border-radius: 0 !important;
 }
 
-.rounded-1 {
+.rounded-1, .category-game__item {
   border-radius: 0.3125rem !important;
 }
 
@@ -14328,9 +14329,6 @@ a {
     padding: 30px;
   }
 }
-.card-game__item:hover {
-  background-color: #f8f8f8;
-}
 .card-game__item .game__btn-play {
   padding: 16px 0;
   border-radius: 15px;
@@ -14346,6 +14344,9 @@ a {
   .card-game__item .game-image {
     max-width: 136px;
   }
+}
+.card-game__item .game-rating__value {
+  color: #97abc7;
 }
 .card-game__item .game-title {
   color: #14243c;
@@ -14425,6 +14426,7 @@ a {
   background-color: #1dbf85;
 }
 .card-game__item .category__item--more {
+  color: #97abc7;
   padding: 0;
 }
 .card-game__item--first {
@@ -14474,6 +14476,9 @@ a {
   color: white;
   font-size: 30px;
 }
+.card-game__item--first .game-rating__value {
+  color: #fff;
+}
 .card-game__item--first .game__btn-play {
   margin-top: 40px;
 }
@@ -14486,6 +14491,12 @@ a {
 }
 .card-game__item--transparent {
   background: rgba(255, 255, 255, 0.1);
+}
+.card-game__item--transparent .category__item--more {
+  color: #fff;
+}
+.card-game__item--transparent .game-rating__value {
+  color: #fff;
 }
 .card-game__item--transparent .game__image-wrapper {
   position: relative;
@@ -14522,7 +14533,7 @@ a {
   filter: brightness(0.3);
 }
 .card-game__item--transparent:hover .game-rating__value {
-  color: #14243c;
+  color: #97abc7;
 }
 .card-game__item--transparent:hover .game-title {
   color: #14243c;
@@ -14533,6 +14544,9 @@ a {
 }
 .card-game__item--transparent:hover .game-viewers::before {
   background-image: url("../icons/ic-views-active.svg");
+}
+.card-game__item--transparent:hover .category__item--more {
+  color: #97abc7;
 }
 .card-game__item--portrait {
   padding: 0;
@@ -14551,6 +14565,9 @@ a {
 }
 .card-game__item--portrait .card-game__content .category__list {
   margin-top: 20px;
+}
+.card-game__item--landscape:hover {
+  background-color: #f8f8f8;
 }
 
 .footer__desc {
@@ -14657,6 +14674,11 @@ a {
   font-weight: 700;
   line-height: 69px;
   margin-bottom: 5px;
+}
+
+.navbar-mobile__title {
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .page-menu {
