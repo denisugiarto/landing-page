@@ -677,7 +677,7 @@ progress {
     max-width: 1320px;
   }
 }
-.row, .footer__sosmed-wrapper, .footer__content {
+.row, .footer__content {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: -webkit-box;
@@ -689,7 +689,7 @@ progress {
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
-.row > *, .footer__sosmed-wrapper > *, .footer__content > * {
+.row > *, .footer__content > * {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 100%;
@@ -1366,8 +1366,7 @@ progress {
 }
 
 .g-4,
-.gy-4,
-.footer__sosmed-wrapper {
+.gy-4 {
   --bs-gutter-y: 1.25rem;
 }
 
@@ -8889,7 +8888,7 @@ textarea.form-control-lg {
   display: table-cell !important;
 }
 
-.d-flex, .section__header, .page-menu, .card-game__item .category__list, .game-of-the-week .section__header {
+.d-flex, .section__header, .page-menu, .footer__copyright-sosmed-wrapper, .footer__sosmed-wrapper, .card-game__item .category__list, .game-of-the-week .section__header {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -9235,7 +9234,7 @@ textarea.form-control-lg {
   flex-direction: row !important;
 }
 
-.flex-column, .footer__sosmed-wrapper, .game-of-the-week .section__header {
+.flex-column, .footer__copyright-sosmed-wrapper, .game-of-the-week .section__header {
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
   -ms-flex-direction: column !important;
@@ -9293,7 +9292,7 @@ textarea.form-control-lg {
   flex-wrap: wrap-reverse !important;
 }
 
-.justify-content-start {
+.justify-content-start, .footer__copyright-sosmed-wrapper {
   -webkit-box-pack: start !important;
   -ms-flex-pack: start !important;
   justify-content: flex-start !important;
@@ -9311,7 +9310,7 @@ textarea.form-control-lg {
   justify-content: center !important;
 }
 
-.justify-content-between, .section__header, .footer__sosmed-wrapper, .game-of-the-week .section__header {
+.justify-content-between, .section__header, .game-of-the-week .section__header {
   -webkit-box-pack: justify !important;
   -ms-flex-pack: justify !important;
   justify-content: space-between !important;
@@ -9340,7 +9339,7 @@ textarea.form-control-lg {
   align-items: flex-end !important;
 }
 
-.align-items-center, .section__header, .page-menu, .footer__sosmed-wrapper, .card-game__item .category__list {
+.align-items-center, .section__header, .page-menu, .card-game__item .category__list {
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
@@ -9618,7 +9617,7 @@ textarea.form-control-lg {
   margin-top: 0.5rem !important;
 }
 
-.mt-3 {
+.mt-3, .footer__sosmed-wrapper {
   margin-top: 1rem !important;
 }
 
@@ -9837,7 +9836,7 @@ textarea.form-control-lg {
   padding-left: 2rem !important;
 }
 
-.px-7, .footer__sosmed-wrapper {
+.px-7 {
   padding-right: 3rem !important;
   padding-left: 3rem !important;
 }
@@ -9862,7 +9861,7 @@ textarea.form-control-lg {
   padding-bottom: 0.5rem !important;
 }
 
-.py-3, .footer__sosmed-wrapper {
+.py-3 {
   padding-top: 1rem !important;
   padding-bottom: 1rem !important;
 }
@@ -10388,7 +10387,7 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-gray-800-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-black, .footer__sosmed-wrapper {
+.bg-black, .footer__copyright-sosmed-wrapper {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
 }
@@ -11316,7 +11315,7 @@ textarea.form-control-lg {
     -ms-flex: 1 1 auto !important;
     flex: 1 1 auto !important;
   }
-  .flex-md-row, .footer__sosmed-wrapper, .game-of-the-week .section__header {
+  .flex-md-row, .footer__copyright-sosmed-wrapper, .game-of-the-week .section__header {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
     -ms-flex-direction: row !important;
@@ -11385,7 +11384,7 @@ textarea.form-control-lg {
     -ms-flex-pack: center !important;
     justify-content: center !important;
   }
-  .justify-content-md-between {
+  .justify-content-md-between, .footer__copyright-sosmed-wrapper {
     -webkit-box-pack: justify !important;
     -ms-flex-pack: justify !important;
     justify-content: space-between !important;
@@ -11622,7 +11621,7 @@ textarea.form-control-lg {
     margin-top: auto !important;
     margin-bottom: auto !important;
   }
-  .mt-md-0 {
+  .mt-md-0, .footer__sosmed-wrapper {
     margin-top: 0 !important;
   }
   .mt-md-1 {
@@ -14556,6 +14555,14 @@ a {
 
 .footer__desc {
   font-size: 13px;
+}
+.footer__copyright-sosmed-wrapper {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .footer__copyright-sosmed-wrapper {
+    padding: 18px 50px;
+  }
 }
 .footer__title {
   font-size: 30px;
