@@ -19,6 +19,7 @@
   <body>
     
 <main>
+  <div class="navbar d-none d-lg-block py-0">
   <div class="header">
     <div class="header__brand">
       <img src="./assets/icons/ic-brand.svg" alt="" />
@@ -165,6 +166,204 @@
 
     </div>
   </div>
+</div>
+<div class="header--mobile d-lg-none sticky-top border-bottom shadow-sm">
+  <div class="header d-flex justify-content-between px-3">
+    <a
+      class="header__menu-icon"
+      role="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasCategoryGames"
+    >
+      <img src="./assets/icons/ic-bars.svg" alt="" />
+    </a>
+    <div class="header__brand">
+      <img src="./assets/icons/ic-brand.svg" alt="" />
+    </div>
+    <div
+      class="header__menu-icon"
+      role="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasMenu"
+    >
+      <img src="./assets/icons/ic-ellipsis-vertical.svg" alt="" />
+    </div>
+  </div>
+  <!-- category-game brand search and menu -->
+</div>
+
+<!-- Offcanvas category -->
+<div
+  class="offcanvas offcanvas-start"
+  tabindex="-1"
+  id="offcanvasCategoryGames"
+  aria-labelledby="offcanvasCategoryGamesLabel"
+>
+  <div class="offcanvas-header">
+    <div class="category-game__title">Category Game</div>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      data-bs-target="#offcanvasCategoryGames"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="category-game__list row gy-3 flex-column overflow-auto">
+      
+<button
+  class="category-game__item col-auto d-flex bg-light px-2 py-1 rounded-1 text-dark border-0"
+>
+  <div class="category-game__icon me-2">
+    <img src="./assets/icons/ic-multiplayer.svg" alt="" />
+  </div>
+  <div class="category-game__name">Multiplayer</div>
+</button>
+
+
+<button
+  class="category-game__item col-auto d-flex bg-light px-2 py-1 rounded-1 text-dark border-0"
+>
+  <div class="category-game__icon me-2">
+    <img src="./assets/icons/ic-3D.svg" alt="" />
+  </div>
+  <div class="category-game__name">3D</div>
+</button>
+
+
+<button
+  class="category-game__item col-auto d-flex bg-light px-2 py-1 rounded-1 text-dark border-0"
+>
+  <div class="category-game__icon me-2">
+    <img src="./assets/icons/ic-action.svg" alt="" />
+  </div>
+  <div class="category-game__name">action</div>
+</button>
+
+
+<button
+  class="category-game__item col-auto d-flex bg-light px-2 py-1 rounded-1 text-dark border-0"
+>
+  <div class="category-game__icon me-2">
+    <img src="./assets/icons/ic-adventure.svg" alt="" />
+  </div>
+  <div class="category-game__name">adventure</div>
+</button>
+
+
+<button
+  class="category-game__item col-auto d-flex bg-light px-2 py-1 rounded-1 text-dark border-0"
+>
+  <div class="category-game__icon me-2">
+    <img src="./assets/icons/ic-arcade.svg" alt="" />
+  </div>
+  <div class="category-game__name">arcade</div>
+</button>
+
+
+<button
+  class="category-game__item col-auto d-flex bg-light px-2 py-1 rounded-1 text-dark border-0"
+>
+  <div class="category-game__icon me-2">
+    <img src="./assets/icons/ic-shooting.svg" alt="" />
+  </div>
+  <div class="category-game__name">shooting</div>
+</button>
+
+
+<button
+  class="category-game__item col-auto d-flex bg-light px-2 py-1 rounded-1 text-dark border-0"
+>
+  <div class="category-game__icon me-2">
+    <img src="./assets/icons/ic-sports.svg" alt="" />
+  </div>
+  <div class="category-game__name">sports</div>
+</button>
+
+
+<button
+  class="category-game__item col-auto d-flex bg-light px-2 py-1 rounded-1 text-dark border-0"
+>
+  <div class="category-game__icon me-2">
+    <img src="./assets/icons/ic-singleplayer.svg" alt="" />
+  </div>
+  <div class="category-game__name">singleplayer</div>
+</button>
+
+
+<button
+  class="category-game__item col-auto d-flex bg-light px-2 py-1 rounded-1 text-dark border-0"
+>
+  <div class="category-game__icon me-2">
+    <img src="./assets/icons/ic-hypercasual.svg" alt="" />
+  </div>
+  <div class="category-game__name">Casual / HyperCasual</div>
+</button>
+
+    </div>
+  </div>
+</div>
+<!-- Offcanvas search and menu -->
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="offcanvasMenu"
+  aria-labelledby="offcanvasMenuLabel"
+>
+  <div class="offcanvas-header">
+    <form>
+      <input
+        type="search"
+        class="form-control"
+        name=""
+        id=""
+        placeholder="Search..."
+      />
+    </form>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      data-bs-target="#offcanvasMenu"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body bg-dark">
+    <div class="d-flex flex-column gap-3 text-dark">
+      <a href="" class="page-menu__item">Top Player</a>
+      <div class="page-menu__item">
+        <a
+          href=""
+          class="page-menu__item--dropdown"
+          data-bs-toggle="dropdown"
+          id="arcadeDropdown"
+        >
+          Arcade
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="arcadeDropdown">
+          <li><a class="dropdown-item" href="">Arcade 1</a></li>
+          <li><a class="dropdown-item" href="">Arcade 2</a></li>
+        </ul>
+      </div>
+      <div class="page-menu__item">
+        <a
+          id="clickerDropdown"
+          href=""
+          class="page-menu__item--dropdown"
+          data-bs-toggle="dropdown"
+          >Clicker</a
+        >
+        <ul class="dropdown-menu" aria-labelledby="clickerDropdown">
+          <li><a class="dropdown-item" href="">Clicker 1</a></li>
+          <li><a class="dropdown-item" href="">Clicker 2</a></li>
+        </ul>
+      </div>
+      <a href="" class="page-menu__item">Sample Page</a>
+    </div>
+  </div>
+</div>
+
   <section class="section hero">
     <h1 class="hero__heading">Plan Your Browser</h1>
     <p class="hero__description">
@@ -179,10 +378,10 @@
 
   <section class="section game-of-the-week">
     <div class="section__header">
-      <h2 class="fs-2">Game of the Week</h2>
+      <h2 class="section__title">Game of the Week</h2>
       <a type="button" class="btn__more-game">See More Game</a>
     </div>
-    <div class="game__list game__list--first-big mt-6">
+    <div class="game__list game__list--first-big mt-3 mt-md-6">
       
 <div class="card-game__item card-game__item--first">
   <div class="card-game__background">
@@ -213,9 +412,10 @@
 </div>
 
 
-<div class="card-game__item card-game__item--transparent">
-  <div class="d-flex gap-2 gap-lg-4">
-    <div class="col-auto">
+<a role="button" class="card-game__item card-game__item--transparent">
+  <div class="d-flex gap-3 gap-lg-4">
+    <div class="game__image-wrapper">
+      <div class="game__play-btn"></div>
       <img src="./assets/images/img-Walking Girl.webp" alt="" class="game-image" />
     </div>
     <div class="card-game__content col-6 col-md-7">
@@ -253,12 +453,13 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
 
-<div class="card-game__item card-game__item--transparent">
-  <div class="d-flex gap-2 gap-lg-4">
-    <div class="col-auto">
+<a role="button" class="card-game__item card-game__item--transparent">
+  <div class="d-flex gap-3 gap-lg-4">
+    <div class="game__image-wrapper">
+      <div class="game__play-btn"></div>
       <img src="./assets/images/img-Glowing Orange.webp" alt="" class="game-image" />
     </div>
     <div class="card-game__content col-6 col-md-7">
@@ -296,12 +497,13 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
 
-<div class="card-game__item card-game__item--transparent">
-  <div class="d-flex gap-2 gap-lg-4">
-    <div class="col-auto">
+<a role="button" class="card-game__item card-game__item--transparent">
+  <div class="d-flex gap-3 gap-lg-4">
+    <div class="game__image-wrapper">
+      <div class="game__play-btn"></div>
       <img src="./assets/images/img-Detective C.webp" alt="" class="game-image" />
     </div>
     <div class="card-game__content col-6 col-md-7">
@@ -339,12 +541,13 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
 
-<div class="card-game__item card-game__item--transparent">
-  <div class="d-flex gap-2 gap-lg-4">
-    <div class="col-auto">
+<a role="button" class="card-game__item card-game__item--transparent">
+  <div class="d-flex gap-3 gap-lg-4">
+    <div class="game__image-wrapper">
+      <div class="game__play-btn"></div>
       <img src="./assets/images/img-How to be a Sup....webp" alt="" class="game-image" />
     </div>
     <div class="card-game__content col-6 col-md-7">
@@ -382,7 +585,7 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
     </div>
   </section>
@@ -391,11 +594,11 @@
       <h2 class="heading">New Game</h2>
       <a type="button" class="btn__more-game">More Game</a>
     </div>
-    <div class="game__list mt-6">
+    <div class="game__list mt-3 mt-md-6">
       
 
-<div class="card-game__item">
-  <div class="d-flex gap-2 gap-lg-4">
+<a role="button" class="card-game__item">
+  <div class="d-flex gap-3 gap-lg-4">
     <div class="col-auto">
       <img src="./assets/images/img-Hungry Shark.webp" alt="" class="game-image" />
     </div>
@@ -434,11 +637,11 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
 
-<div class="card-game__item">
-  <div class="d-flex gap-2 gap-lg-4">
+<a role="button" class="card-game__item">
+  <div class="d-flex gap-3 gap-lg-4">
     <div class="col-auto">
       <img src="./assets/images/img-Euro Galaxy.webp" alt="" class="game-image" />
     </div>
@@ -477,11 +680,11 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
 
-<div class="card-game__item">
-  <div class="d-flex gap-2 gap-lg-4">
+<a role="button" class="card-game__item">
+  <div class="d-flex gap-3 gap-lg-4">
     <div class="col-auto">
       <img src="./assets/images/img-Ice Age Squirrel.webp" alt="" class="game-image" />
     </div>
@@ -520,11 +723,11 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
 
-<div class="card-game__item">
-  <div class="d-flex gap-2 gap-lg-4">
+<a role="button" class="card-game__item">
+  <div class="d-flex gap-3 gap-lg-4">
     <div class="col-auto">
       <img src="./assets/images/img-Astronout Man.webp" alt="" class="game-image" />
     </div>
@@ -563,11 +766,11 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
 
-<div class="card-game__item">
-  <div class="d-flex gap-2 gap-lg-4">
+<a role="button" class="card-game__item">
+  <div class="d-flex gap-3 gap-lg-4">
     <div class="col-auto">
       <img src="./assets/images/img-Snail Race on W....webp" alt="" class="game-image" />
     </div>
@@ -606,11 +809,11 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
 
-<div class="card-game__item">
-  <div class="d-flex gap-2 gap-lg-4">
+<a role="button" class="card-game__item">
+  <div class="d-flex gap-3 gap-lg-4">
     <div class="col-auto">
       <img src="./assets/images/img-Make a Glass Fi....webp" alt="" class="game-image" />
     </div>
@@ -649,7 +852,7 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
     </div>
   </section>
@@ -658,7 +861,7 @@
       <h2 class="heading">Popular Game</h2>
       <a type="button" class="btn__more-game">More Game</a>
     </div>
-    <div class="game__list game__list--more mt-6">
+    <div class="game__list game__list--more mt-3 mt-md-6">
       
 <div class="card-game__item card-game__item--portrait">
   <img src="./assets/images/img-Halloween Custom.webp" alt="" class="game-image" />
@@ -986,11 +1189,11 @@
       <h2 class="heading">You May Like</h2>
       <a type="button" class="btn__more-game">More Game</a>
     </div>
-    <div class="game__list mt-6">
+    <div class="game__list mt-3 mt-md-6">
       
 
-<div class="card-game__item">
-  <div class="d-flex gap-2 gap-lg-4">
+<a role="button" class="card-game__item">
+  <div class="d-flex gap-3 gap-lg-4">
     <div class="col-auto">
       <img src="./assets/images/img-Hungry Shark.webp" alt="" class="game-image" />
     </div>
@@ -1029,11 +1232,11 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
 
-<div class="card-game__item">
-  <div class="d-flex gap-2 gap-lg-4">
+<a role="button" class="card-game__item">
+  <div class="d-flex gap-3 gap-lg-4">
     <div class="col-auto">
       <img src="./assets/images/img-Euro Galaxy.webp" alt="" class="game-image" />
     </div>
@@ -1072,11 +1275,11 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
 
-<div class="card-game__item">
-  <div class="d-flex gap-2 gap-lg-4">
+<a role="button" class="card-game__item">
+  <div class="d-flex gap-3 gap-lg-4">
     <div class="col-auto">
       <img src="./assets/images/img-Ice Age Squirrel.webp" alt="" class="game-image" />
     </div>
@@ -1115,11 +1318,11 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
 
-<div class="card-game__item">
-  <div class="d-flex gap-2 gap-lg-4">
+<a role="button" class="card-game__item">
+  <div class="d-flex gap-3 gap-lg-4">
     <div class="col-auto">
       <img src="./assets/images/img-Astronout Man.webp" alt="" class="game-image" />
     </div>
@@ -1158,11 +1361,11 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
 
-<div class="card-game__item">
-  <div class="d-flex gap-2 gap-lg-4">
+<a role="button" class="card-game__item">
+  <div class="d-flex gap-3 gap-lg-4">
     <div class="col-auto">
       <img src="./assets/images/img-Snail Race on W....webp" alt="" class="game-image" />
     </div>
@@ -1201,11 +1404,11 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
 
-<div class="card-game__item">
-  <div class="d-flex gap-2 gap-lg-4">
+<a role="button" class="card-game__item">
+  <div class="d-flex gap-3 gap-lg-4">
     <div class="col-auto">
       <img src="./assets/images/img-Make a Glass Fi....webp" alt="" class="game-image" />
     </div>
@@ -1244,12 +1447,11 @@
       </div>
     </div>
   </div>
-</div>
+</a>
+ 
 
-      
-
-<div class="card-game__item">
-  <div class="d-flex gap-2 gap-lg-4">
+<a role="button" class="card-game__item">
+  <div class="d-flex gap-3 gap-lg-4">
     <div class="col-auto">
       <img src="./assets/images/img-Hungry Shark.webp" alt="" class="game-image" />
     </div>
@@ -1288,11 +1490,11 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
 
-<div class="card-game__item">
-  <div class="d-flex gap-2 gap-lg-4">
+<a role="button" class="card-game__item">
+  <div class="d-flex gap-3 gap-lg-4">
     <div class="col-auto">
       <img src="./assets/images/img-Euro Galaxy.webp" alt="" class="game-image" />
     </div>
@@ -1331,11 +1533,11 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
 
-<div class="card-game__item">
-  <div class="d-flex gap-2 gap-lg-4">
+<a role="button" class="card-game__item">
+  <div class="d-flex gap-3 gap-lg-4">
     <div class="col-auto">
       <img src="./assets/images/img-Ice Age Squirrel.webp" alt="" class="game-image" />
     </div>
@@ -1374,11 +1576,11 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
 
-<div class="card-game__item">
-  <div class="d-flex gap-2 gap-lg-4">
+<a role="button" class="card-game__item">
+  <div class="d-flex gap-3 gap-lg-4">
     <div class="col-auto">
       <img src="./assets/images/img-Astronout Man.webp" alt="" class="game-image" />
     </div>
@@ -1417,11 +1619,11 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
 
-<div class="card-game__item">
-  <div class="d-flex gap-2 gap-lg-4">
+<a role="button" class="card-game__item">
+  <div class="d-flex gap-3 gap-lg-4">
     <div class="col-auto">
       <img src="./assets/images/img-Snail Race on W....webp" alt="" class="game-image" />
     </div>
@@ -1460,11 +1662,11 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
 
-<div class="card-game__item">
-  <div class="d-flex gap-2 gap-lg-4">
+<a role="button" class="card-game__item">
+  <div class="d-flex gap-3 gap-lg-4">
     <div class="col-auto">
       <img src="./assets/images/img-Make a Glass Fi....webp" alt="" class="game-image" />
     </div>
@@ -1503,14 +1705,14 @@
       </div>
     </div>
   </div>
-</div>
+</a>
 
     </div>
   </section>
 </main>
  <footer>
   <div class="footer__content">
-    <div class="footer__item  order-0">
+    <div class="footer__item">
       <h2 class="footer__title">Footer 1</h2>
       <p class="footer__desc">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
@@ -1520,19 +1722,7 @@
         vulputate tristique. Morbi placerat eleifend lectus interdum consequat.
       </p>
     </div>
-    <div class="footer__item footer__item--divider order-1"></div>
-    <div class="footer__item order-3 order-lg-1">
-      <h2 class="footer__title">Footer 3</h2>
-      <p class="footer__desc">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        fringilla tincidunt purus et condimentum. Integer eu posuere eros.
-        Integer imperdiet, purus vitae egestas dapibus, dolor magna dictum quam,
-        eu viverra nibh elit ac urna. Nunc ornare libero sit amet justo
-        vulputate tristique. Morbi placerat eleifend lectus interdum consequat.
-      </p>
-    </div>
-    <div class="footer__item order-3 footer__item--divider"></div>
-    <div class="footer__item order-2 order-lg-4">
+    <div class="footer__item">
       <h2 class="footer__title">Footer 2</h2>
       <p class="footer__desc">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
@@ -1542,36 +1732,45 @@
         vulputate tristique. Morbi placerat eleifend lectus interdum consequat.
       </p>
     </div>
-    <div class="footer__item order-5 footer__item--divider"></div>
-  </div>
-  <div
-    class="d-flex justify-content-between bg-black align-items-center py-3 px-7"
-  >
-    <div class="text-gray-400">
-      © 2022 Alright Reserved by <span class="fw-bold">Cloud Arcade</span>
+    <div class="footer__item">
+      <h2 class="footer__title">Footer 3</h2>
+      <p class="footer__desc">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+        fringilla tincidunt purus et condimentum. Integer eu posuere eros.
+        Integer imperdiet, purus vitae egestas dapibus, dolor magna dictum quam,
+        eu viverra nibh elit ac urna. Nunc ornare libero sit amet justo
+        vulputate tristique. Morbi placerat eleifend lectus interdum consequat.
+      </p>
     </div>
-    <div class="d-flex">
-      <a href="#" class="sosmed-item">
-        <img src="./assets/icons/ic-brand-fb.svg" alt="" />
-      </a>
-      <div class="divider px-2">
-        <img src="./assets/icons/ic-divider.svg" alt="" />
+  </div>
+  <div class="container-fluid">
+    <div class="footer__sosmed-wrapper">
+      <div class="footer__copyright">
+        © 2022 Alright Reserved by <span class="fw-bold">Cloud Arcade</span>
       </div>
-      <a href="#" class="sosmed-item">
-        <img src="./assets/icons/ic-brand-ig.svg" alt="" />
-      </a>
-      <div class="divider px-2">
-        <img src="./assets/icons/ic-divider.svg" alt="" />
+      <div class="d-flex">
+        <a href="#" class="sosmed-item">
+          <img src="./assets/icons/ic-brand-fb.svg" alt="" />
+        </a>
+        <div class="divider px-2">
+          <img src="./assets/icons/ic-divider.svg" alt="" />
+        </div>
+        <a href="#" class="sosmed-item">
+          <img src="./assets/icons/ic-brand-ig.svg" alt="" />
+        </a>
+        <div class="divider px-2">
+          <img src="./assets/icons/ic-divider.svg" alt="" />
+        </div>
+        <a href="#" class="sosmed-item">
+          <img src="./assets/icons/ic-brand-twitter.svg" alt="" />
+        </a>
+        <div class="divider px-2">
+          <img src="./assets/icons/ic-divider.svg" alt="" />
+        </div>
+        <a href="#" class="sosmed-item">
+          <img src="./assets/icons/ic-brand-linkedin.svg" alt="" />
+        </a>
       </div>
-      <a href="#" class="sosmed-item">
-        <img src="./assets/icons/ic-brand-twitter.svg" alt="" />
-      </a>
-      <div class="divider px-2">
-        <img src="./assets/icons/ic-divider.svg" alt="" />
-      </div>
-      <a href="#" class="sosmed-item">
-        <img src="./assets/icons/ic-brand-linkedin.svg" alt="" />
-      </a>
     </div>
   </div>
 </footer>
