@@ -5250,40 +5250,40 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 992px) {
-  .navbar-expand-lg, .header {
+  .navbar-expand-lg, .navbar__wrapper, .header {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
   }
-  .navbar-expand-lg .navbar-nav, .header .navbar-nav {
+  .navbar-expand-lg .navbar-nav, .navbar__wrapper .navbar-nav, .header .navbar-nav {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
   }
-  .navbar-expand-lg .navbar-nav .dropdown-menu, .header .navbar-nav .dropdown-menu {
+  .navbar-expand-lg .navbar-nav .dropdown-menu, .navbar__wrapper .navbar-nav .dropdown-menu, .header .navbar-nav .dropdown-menu {
     position: absolute;
   }
-  .navbar-expand-lg .navbar-nav .nav-link, .header .navbar-nav .nav-link {
+  .navbar-expand-lg .navbar-nav .nav-link, .navbar__wrapper .navbar-nav .nav-link, .header .navbar-nav .nav-link {
     padding-right: var(--bs-navbar-nav-link-padding-x);
     padding-left: var(--bs-navbar-nav-link-padding-x);
   }
-  .navbar-expand-lg .navbar-nav-scroll, .header .navbar-nav-scroll {
+  .navbar-expand-lg .navbar-nav-scroll, .navbar__wrapper .navbar-nav-scroll, .header .navbar-nav-scroll {
     overflow: visible;
   }
-  .navbar-expand-lg .navbar-collapse, .header .navbar-collapse {
+  .navbar-expand-lg .navbar-collapse, .navbar__wrapper .navbar-collapse, .header .navbar-collapse {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
   }
-  .navbar-expand-lg .navbar-toggler, .header .navbar-toggler {
+  .navbar-expand-lg .navbar-toggler, .navbar__wrapper .navbar-toggler, .header .navbar-toggler {
     display: none;
   }
-  .navbar-expand-lg .offcanvas, .header .offcanvas {
+  .navbar-expand-lg .offcanvas, .navbar__wrapper .offcanvas, .header .offcanvas {
     position: static;
     z-index: auto;
     -webkit-box-flex: 1;
@@ -5299,10 +5299,10 @@ textarea.form-control-lg {
     -webkit-transition: none;
     transition: none;
   }
-  .navbar-expand-lg .offcanvas .offcanvas-header, .header .offcanvas .offcanvas-header {
+  .navbar-expand-lg .offcanvas .offcanvas-header, .navbar__wrapper .offcanvas .offcanvas-header, .header .offcanvas .offcanvas-header {
     display: none;
   }
-  .navbar-expand-lg .offcanvas .offcanvas-body, .header .offcanvas .offcanvas-body {
+  .navbar-expand-lg .offcanvas .offcanvas-body, .navbar__wrapper .offcanvas .offcanvas-body, .header .offcanvas .offcanvas-body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -9234,7 +9234,7 @@ textarea.form-control-lg {
   flex-direction: row !important;
 }
 
-.flex-column, .footer__copyright-sosmed-wrapper, .game-of-the-week .section__header {
+.flex-column, .navbar__wrapper, .footer__copyright-sosmed-wrapper, .game-of-the-week .section__header {
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
   -ms-flex-direction: column !important;
@@ -14714,6 +14714,10 @@ a {
   .hero__heading {
     font-size: 46px;
   }
+}
+
+.navbar__wrapper {
+  background-color: #fff;
 }
 
 .page-menu {
