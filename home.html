@@ -19,13 +19,13 @@
   <body>
     
 <main>
-  <div class="header--mobile d-lg-none sticky-top border-bottom shadow-sm">
-  <div class="header d-flex justify-content-between px-3">
+  <nav class="navbar navbar-expand-lg bg-light flex-column">
+  <div class="d-flex justify-content-between d-lg-none w-100 p-3">
     <a
       class="header__menu-icon"
       role="button"
       data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasCategoryGames"
+      data-bs-target="#offcanvasPageMenu"
     >
       <img src="./assets/icons/ic-bars.svg" alt="" />
     </a>
@@ -36,15 +36,15 @@
       class="header__menu-icon"
       role="button"
       data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasMenu"
+      data-bs-target="#offcanvasLoginMenu"
     >
       <img src="./assets/icons/ic-ellipsis-vertical.svg" alt="" />
     </div>
   </div>
-  <!-- category-game brand search and menu -->
-</div>
-<div class="navbar py-0">
-  <div class="d-none d-lg-block">
+  <div
+    class="collapse navbar-collapse flex-column align-items-stretch w-100"
+    id="navbarSupportedContent"
+  >
     <div class="header">
       <div class="header__brand">
         <img src="./assets/icons/ic-brand.svg" alt="" />
@@ -61,7 +61,124 @@
         <a role="button" href="" class="header__login">LOGIN</a>
       </div>
     </div>
-    <div class="page-menu">
+  </div>
+  <div class="category-game d-flex align-items-center px-3 px-md-6 w-100">
+    <div
+      class="category-game__title col-auto d-none d-lg-block border-end border-dark pe-4"
+    >
+      Category Game
+    </div>
+    <div class="category-game__list">
+      
+<button
+  class="category-game__item"
+>
+  <div class="category-game__icon me-2">
+    <img src="./assets/icons/ic-multiplayer.svg" alt="" />
+  </div>
+  <div class="category-game__name">Multiplayer</div>
+</button>
+
+
+<button
+  class="category-game__item"
+>
+  <div class="category-game__icon me-2">
+    <img src="./assets/icons/ic-3D.svg" alt="" />
+  </div>
+  <div class="category-game__name">3D</div>
+</button>
+
+
+<button
+  class="category-game__item"
+>
+  <div class="category-game__icon me-2">
+    <img src="./assets/icons/ic-action.svg" alt="" />
+  </div>
+  <div class="category-game__name">action</div>
+</button>
+
+
+<button
+  class="category-game__item"
+>
+  <div class="category-game__icon me-2">
+    <img src="./assets/icons/ic-adventure.svg" alt="" />
+  </div>
+  <div class="category-game__name">adventure</div>
+</button>
+
+
+<button
+  class="category-game__item"
+>
+  <div class="category-game__icon me-2">
+    <img src="./assets/icons/ic-arcade.svg" alt="" />
+  </div>
+  <div class="category-game__name">arcade</div>
+</button>
+
+
+<button
+  class="category-game__item"
+>
+  <div class="category-game__icon me-2">
+    <img src="./assets/icons/ic-shooting.svg" alt="" />
+  </div>
+  <div class="category-game__name">shooting</div>
+</button>
+
+
+<button
+  class="category-game__item"
+>
+  <div class="category-game__icon me-2">
+    <img src="./assets/icons/ic-sports.svg" alt="" />
+  </div>
+  <div class="category-game__name">sports</div>
+</button>
+
+
+<button
+  class="category-game__item"
+>
+  <div class="category-game__icon me-2">
+    <img src="./assets/icons/ic-singleplayer.svg" alt="" />
+  </div>
+  <div class="category-game__name">singleplayer</div>
+</button>
+
+
+<button
+  class="category-game__item"
+>
+  <div class="category-game__icon me-2">
+    <img src="./assets/icons/ic-hypercasual.svg" alt="" />
+  </div>
+  <div class="category-game__name">Casual / HyperCasual</div>
+</button>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Offcanvas site menu -->
+<div
+  class="offcanvas offcanvas-start"
+  tabindex="-1"
+  id="offcanvasPageMenu"
+  aria-labelledby="offcanvasPageMenuLabel"
+>
+  <div class="offcanvas-body bg-dark">
+    <div class="d-flex flex-column gap-3 text-dark">
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="offcanvas"
+        data-bs-target="#offcanvasPageMenu"
+        aria-label="Close"
+      ></button>
       <a href="" class="page-menu__item">Top Player</a>
       <div class="page-menu__item">
         <a
@@ -93,224 +210,13 @@
       <a href="" class="page-menu__item">Sample Page</a>
     </div>
   </div>
-  <div class="category-game d-flex align-items-center px-6">
-    <div class="category-game__title col-auto d-none d-lg-block border-end border-dark">Category Game</div>
-    <div
-      class="category-game__list"
-    >
-      
-<button
-  class="category-game__item"
->
-  <div class="category-game__icon me-2">
-    <img src="./assets/icons/ic-multiplayer.svg" alt="" />
-  </div>
-  <div class="category-game__name">Multiplayer</div>
-</button>
-
-
-<button
-  class="category-game__item"
->
-  <div class="category-game__icon me-2">
-    <img src="./assets/icons/ic-3D.svg" alt="" />
-  </div>
-  <div class="category-game__name">3D</div>
-</button>
-
-
-<button
-  class="category-game__item"
->
-  <div class="category-game__icon me-2">
-    <img src="./assets/icons/ic-action.svg" alt="" />
-  </div>
-  <div class="category-game__name">action</div>
-</button>
-
-
-<button
-  class="category-game__item"
->
-  <div class="category-game__icon me-2">
-    <img src="./assets/icons/ic-adventure.svg" alt="" />
-  </div>
-  <div class="category-game__name">adventure</div>
-</button>
-
-
-<button
-  class="category-game__item"
->
-  <div class="category-game__icon me-2">
-    <img src="./assets/icons/ic-arcade.svg" alt="" />
-  </div>
-  <div class="category-game__name">arcade</div>
-</button>
-
-
-<button
-  class="category-game__item"
->
-  <div class="category-game__icon me-2">
-    <img src="./assets/icons/ic-shooting.svg" alt="" />
-  </div>
-  <div class="category-game__name">shooting</div>
-</button>
-
-
-<button
-  class="category-game__item"
->
-  <div class="category-game__icon me-2">
-    <img src="./assets/icons/ic-sports.svg" alt="" />
-  </div>
-  <div class="category-game__name">sports</div>
-</button>
-
-
-<button
-  class="category-game__item"
->
-  <div class="category-game__icon me-2">
-    <img src="./assets/icons/ic-singleplayer.svg" alt="" />
-  </div>
-  <div class="category-game__name">singleplayer</div>
-</button>
-
-
-<button
-  class="category-game__item"
->
-  <div class="category-game__icon me-2">
-    <img src="./assets/icons/ic-hypercasual.svg" alt="" />
-  </div>
-  <div class="category-game__name">Casual / HyperCasual</div>
-</button>
-
-    </div>
-  </div>
 </div>
-
-
-<!-- Offcanvas category -->
-<div
-  class="offcanvas offcanvas-start"
-  tabindex="-1"
-  id="offcanvasCategoryGames"
-  aria-labelledby="offcanvasCategoryGamesLabel"
->
-  <div class="offcanvas-header">
-    <div class="navbar-mobile__title">Category Game</div>
-    <button
-      type="button"
-      class="btn-close"
-      data-bs-dismiss="offcanvas"
-      data-bs-target="#offcanvasCategoryGames"
-      aria-label="Close"
-    ></button>
-  </div>
-  <div class="offcanvas-body">
-    <div class="navbar-mobile__game-category">
-      
-<button
-  class="category-game__item"
->
-  <div class="category-game__icon me-2">
-    <img src="./assets/icons/ic-multiplayer.svg" alt="" />
-  </div>
-  <div class="category-game__name">Multiplayer</div>
-</button>
-
-
-<button
-  class="category-game__item"
->
-  <div class="category-game__icon me-2">
-    <img src="./assets/icons/ic-3D.svg" alt="" />
-  </div>
-  <div class="category-game__name">3D</div>
-</button>
-
-
-<button
-  class="category-game__item"
->
-  <div class="category-game__icon me-2">
-    <img src="./assets/icons/ic-action.svg" alt="" />
-  </div>
-  <div class="category-game__name">action</div>
-</button>
-
-
-<button
-  class="category-game__item"
->
-  <div class="category-game__icon me-2">
-    <img src="./assets/icons/ic-adventure.svg" alt="" />
-  </div>
-  <div class="category-game__name">adventure</div>
-</button>
-
-
-<button
-  class="category-game__item"
->
-  <div class="category-game__icon me-2">
-    <img src="./assets/icons/ic-arcade.svg" alt="" />
-  </div>
-  <div class="category-game__name">arcade</div>
-</button>
-
-
-<button
-  class="category-game__item"
->
-  <div class="category-game__icon me-2">
-    <img src="./assets/icons/ic-shooting.svg" alt="" />
-  </div>
-  <div class="category-game__name">shooting</div>
-</button>
-
-
-<button
-  class="category-game__item"
->
-  <div class="category-game__icon me-2">
-    <img src="./assets/icons/ic-sports.svg" alt="" />
-  </div>
-  <div class="category-game__name">sports</div>
-</button>
-
-
-<button
-  class="category-game__item"
->
-  <div class="category-game__icon me-2">
-    <img src="./assets/icons/ic-singleplayer.svg" alt="" />
-  </div>
-  <div class="category-game__name">singleplayer</div>
-</button>
-
-
-<button
-  class="category-game__item"
->
-  <div class="category-game__icon me-2">
-    <img src="./assets/icons/ic-hypercasual.svg" alt="" />
-  </div>
-  <div class="category-game__name">Casual / HyperCasual</div>
-</button>
-
-    </div>
-  </div>
-</div>
-<!-- Offcanvas search and menu -->
+<!-- Offcanvas search and login -->
 <div
   class="offcanvas offcanvas-end"
   tabindex="-1"
-  id="offcanvasMenu"
-  aria-labelledby="offcanvasMenuLabel"
+  id="offcanvasLoginMenu"
+  aria-labelledby="offcanvasLoginMenuLabel"
 >
   <div class="offcanvas-header">
     <input
@@ -324,41 +230,20 @@
       type="button"
       class="btn-close"
       data-bs-dismiss="offcanvas"
-      data-bs-target="#offcanvasMenu"
+      data-bs-target="#offcanvasLoginMenu"
       aria-label="Close"
     ></button>
   </div>
-  <div class="offcanvas-body bg-dark">
-    <div class="d-flex flex-column gap-3 text-dark">
-      <a href="" class="page-menu__item">Top Player</a>
-      <div class="page-menu__item">
-        <a
-          href=""
-          class="page-menu__item--dropdown"
-          data-bs-toggle="dropdown"
-          id="arcadeDropdown"
-        >
-          Arcade
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="arcadeDropdown">
-          <li><a class="dropdown-item" href="">Arcade 1</a></li>
-          <li><a class="dropdown-item" href="">Arcade 2</a></li>
-        </ul>
+  <div class="offcanvas-body">
+    <div class="profile">
+      <div class="profile__avatar-wrapper">
+        <img src="./assets/icons/ic-user.svg" class="profile__avatar" alt="profile avatar">
       </div>
-      <div class="page-menu__item">
-        <a
-          id="clickerDropdown"
-          href=""
-          class="page-menu__item--dropdown"
-          data-bs-toggle="dropdown"
-          >Clicker</a
-        >
-        <ul class="dropdown-menu" aria-labelledby="clickerDropdown">
-          <li><a class="dropdown-item" href="">Clicker 1</a></li>
-          <li><a class="dropdown-item" href="">Clicker 2</a></li>
-        </ul>
-      </div>
-      <a href="" class="page-menu__item">Sample Page</a>
+      <div class="profile__name">Admin</div>
+    </div>
+    <div class="d-flex gap-3 flex-column">
+      <a role="button" href="" class=" btn btn-outline-primary rounded-pill">Sign Up</a>
+      <a role="button" href="" class="header__login">LOGIN</a>
     </div>
   </div>
 </div>
