@@ -20,6 +20,7 @@
     
 <main>
   <nav class="navbar navbar__wrapper">
+  <!-- MOBILE NAVIGATION -->
   <div class="navbar__mobile">
     <a
       class="header__menu-icon"
@@ -41,6 +42,7 @@
       <img src="./assets/icons/ic-ellipsis-vertical.svg" alt="" />
     </div>
   </div>
+  <!-- DEKSTOP NAVIGATION  -->
   <div
     class="collapse navbar-collapse flex-column align-items-stretch w-100"
     id="navbarSupportedContent"
@@ -93,12 +95,9 @@
       <a href="" class="page-menu__item">Sample Page</a>
     </div>
   </div>
+  <!-- NAVBAR IN MOBILE AND DEKSTOP -->
   <div class="category-game">
-    <div
-      class="category-game__title"
-    >
-      Category Game
-    </div>
+    <div class="category-game__title">Category Game</div>
     <div class="category-game__list">
       
 <button
@@ -194,7 +193,7 @@
   </div>
 </nav>
 
-<!-- Offcanvas site menu -->
+<!-- MOBILE SITE MENU -->
 <div
   class="offcanvas offcanvas-start"
   tabindex="-1"
@@ -210,39 +209,60 @@
         data-bs-target="#offcanvasPageMenu"
         aria-label="Close"
       ></button>
-      <a href="" class="page-menu__item">Top Player</a>
-      <div class="page-menu__item">
-        <a
-          href=""
-          class="page-menu__item--dropdown"
-          data-bs-toggle="dropdown"
-          id="arcadeDropdown"
-        >
-          Arcade
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="arcadeDropdown">
-          <li><a class="dropdown-item" href="">Arcade 1</a></li>
-          <li><a class="dropdown-item" href="">Arcade 2</a></li>
-        </ul>
+      <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <a role="button" class="accordion-title">
+              Top Player
+            </a>
+          </h2>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+              Arcade
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body p-0">
+              <a role="button" class="accordion-title bg-blue-200">
+                Arcade 1
+              </a>
+              <a role="button" class="accordion-title bg-blue-200">
+                Arcade 2
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+              Clicker
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+            <div class="accordion-body p-0">
+              <a role="button" class="accordion-title bg-blue-200">
+                Clicker 1
+              </a>
+              <a role="button" class="accordion-title bg-blue-200">
+                Clicker 2
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <a role="button" class="accordion-title">
+              Sample Page
+            </a>
+          </h2>
+        </div>
       </div>
-      <div class="page-menu__item">
-        <a
-          id="clickerDropdown"
-          href=""
-          class="page-menu__item--dropdown"
-          data-bs-toggle="dropdown"
-          >Clicker</a
-        >
-        <ul class="dropdown-menu" aria-labelledby="clickerDropdown">
-          <li><a class="dropdown-item" href="">Clicker 1</a></li>
-          <li><a class="dropdown-item" href="">Clicker 2</a></li>
-        </ul>
-      </div>
-      <a href="" class="page-menu__item">Sample Page</a>
     </div>
   </div>
 </div>
-<!-- Offcanvas search and login -->
+<!-- MOBILE SEARCH AND LOGIN -->
 <div
   class="offcanvas offcanvas-end"
   tabindex="-1"
@@ -268,12 +288,18 @@
   <div class="offcanvas-body">
     <div class="profile">
       <div class="profile__avatar-wrapper">
-        <img src="./assets/icons/ic-user.svg" class="profile__avatar" alt="profile avatar">
+        <img
+          src="./assets/icons/ic-user.svg"
+          class="profile__avatar"
+          alt="profile avatar"
+        />
       </div>
       <div class="profile__name">Admin</div>
     </div>
     <div class="d-flex gap-3 flex-column">
-      <a role="button" href="" class=" btn btn-outline-primary rounded-pill">Sign Up</a>
+      <a role="button" href="" class="btn btn-outline-primary rounded-pill"
+        >Sign Up</a
+      >
       <a role="button" href="" class="header__login">LOGIN</a>
     </div>
   </div>
@@ -353,7 +379,7 @@
 </div>
 
       </div>
-      <div class="category__list">
+      <div class="category__list category__list--card">
         
         <div class="category__item category__item--strategy">
           Strategy
@@ -396,7 +422,7 @@
 </div>
 
       </div>
-      <div class="category__list">
+      <div class="category__list category__list--card">
         
         <div class="category__item category__item--adventure">
           Adventure
@@ -439,7 +465,7 @@
 </div>
 
       </div>
-      <div class="category__list">
+      <div class="category__list category__list--card">
         
         <div class="category__item category__item--adventure">
           Adventure
@@ -482,7 +508,7 @@
 </div>
 
       </div>
-      <div class="category__list">
+      <div class="category__list category__list--card">
         
         <div class="category__item category__item--horror">
           Horror

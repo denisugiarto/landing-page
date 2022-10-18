@@ -30,7 +30,7 @@
   --bs-gray-800: #16151b;
   --bs-gray-900: #14243c;
   --bs-primary: #3f8dfd;
-  --bs-secondary: #434343;
+  --bs-secondary: #f3f3f4;
   --bs-success: #1dbf85;
   --bs-warning: #fe8008;
   --bs-danger: #f34f8c;
@@ -43,7 +43,7 @@
   --bs-gray-400: #a7acb4;
   --bs-gray-800: #16151b;
   --bs-primary-rgb: 63, 141, 253;
-  --bs-secondary-rgb: 67, 67, 67;
+  --bs-secondary-rgb: 243, 243, 244;
   --bs-success-rgb: 29, 191, 133;
   --bs-warning-rgb: 254, 128, 8;
   --bs-danger-rgb: 243, 79, 140;
@@ -2678,13 +2678,13 @@ progress {
 
 .table-secondary {
   --bs-table-color: #000;
-  --bs-table-bg: #d9d9d9;
-  --bs-table-border-color: #c3c3c3;
-  --bs-table-striped-bg: #cecece;
+  --bs-table-bg: #fdfdfd;
+  --bs-table-border-color: #e4e4e4;
+  --bs-table-striped-bg: #f0f0f0;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #c3c3c3;
+  --bs-table-active-bg: #e4e4e4;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #c9c9c9;
+  --bs-table-hover-bg: #eaeaea;
   --bs-table-hover-color: #000;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
@@ -3236,7 +3236,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .btn-check[disabled] + .hero__action-button, .btn-check[disabled] + .header__login, .card-game__item .btn-check[disabled] + .game__btn-play, .btn-check:disabled + .btn, .btn-check:disabled + .hero__action-button, .btn-check:disabled + .header__login, .card-game__item .btn-check:disabled + .game__btn-play {
+.btn-check[disabled] + .btn, .btn-check[disabled] + .btn--icon, .btn-check[disabled] + .hero__action-button, .btn-check[disabled] + .header__login, .btn-check[disabled] + .game__btn-play, .btn-check:disabled + .btn, .btn-check:disabled + .btn--icon, .btn-check:disabled + .hero__action-button, .btn-check:disabled + .header__login, .btn-check:disabled + .game__btn-play {
   pointer-events: none;
   -webkit-filter: none;
   filter: none;
@@ -3467,11 +3467,11 @@ textarea.form-control-lg {
 .input-group > .form-floating:focus-within {
   z-index: 5;
 }
-.input-group .btn, .input-group .hero__action-button, .input-group .header__login, .input-group .card-game__item .game__btn-play, .card-game__item .input-group .game__btn-play {
+.input-group .btn, .input-group .btn--icon, .input-group .hero__action-button, .input-group .header__login, .input-group .game__btn-play {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus, .input-group .hero__action-button:focus, .input-group .header__login:focus, .input-group .card-game__item .game__btn-play:focus, .card-game__item .input-group .game__btn-play:focus {
+.input-group .btn:focus, .input-group .btn--icon:focus, .input-group .hero__action-button:focus, .input-group .header__login:focus, .input-group .game__btn-play:focus {
   z-index: 5;
 }
 
@@ -3498,9 +3498,10 @@ textarea.form-control-lg {
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn,
+.input-group-lg > .btn--icon,
 .input-group-lg > .hero__action-button,
 .input-group-lg > .header__login,
-.card-game__item .input-group-lg > .game__btn-play {
+.input-group-lg > .game__btn-play {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.5rem;
@@ -3510,9 +3511,10 @@ textarea.form-control-lg {
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn,
+.input-group-sm > .btn--icon,
 .input-group-sm > .hero__action-button,
 .input-group-sm > .header__login,
-.card-game__item .input-group-sm > .game__btn-play {
+.input-group-sm > .game__btn-play {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.25rem;
@@ -3738,7 +3740,7 @@ textarea.form-control-lg {
   z-index: 4;
 }
 
-.btn, .hero__action-button, .header__login, .card-game__item .game__btn-play {
+.btn, .btn--icon, .hero__action-button, .header__login, .game__btn-play {
   --bs-btn-padding-x: 2rem;
   --bs-btn-padding-y: 0.625rem;
   --bs-btn-font-family: ;
@@ -3778,17 +3780,17 @@ textarea.form-control-lg {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn, .hero__action-button, .header__login, .card-game__item .game__btn-play {
+  .btn, .btn--icon, .hero__action-button, .header__login, .game__btn-play {
     -webkit-transition: none;
     transition: none;
   }
 }
-:not(.btn-check) + .btn:hover, :not(.btn-check) + .hero__action-button:hover, :not(.btn-check) + .header__login:hover, .card-game__item :not(.btn-check) + .game__btn-play:hover, .btn:first-child:hover, .hero__action-button:first-child:hover, .header__login:first-child:hover, .card-game__item .game__btn-play:first-child:hover {
+:not(.btn-check) + .btn:hover, :not(.btn-check) + .btn--icon:hover, :not(.btn-check) + .hero__action-button:hover, :not(.btn-check) + .header__login:hover, :not(.btn-check) + .game__btn-play:hover, .btn:first-child:hover, .btn--icon:first-child:hover, .hero__action-button:first-child:hover, .header__login:first-child:hover, .game__btn-play:first-child:hover {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
 }
-.btn:focus-visible, .hero__action-button:focus-visible, .header__login:focus-visible, .card-game__item .game__btn-play:focus-visible {
+.btn:focus-visible, .btn--icon:focus-visible, .hero__action-button:focus-visible, .header__login:focus-visible, .game__btn-play:focus-visible {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
@@ -3796,22 +3798,22 @@ textarea.form-control-lg {
   -webkit-box-shadow: var(--bs-btn-focus-box-shadow);
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:focus-visible + .btn, .btn-check:focus-visible + .hero__action-button, .btn-check:focus-visible + .header__login, .card-game__item .btn-check:focus-visible + .game__btn-play {
+.btn-check:focus-visible + .btn, .btn-check:focus-visible + .btn--icon, .btn-check:focus-visible + .hero__action-button, .btn-check:focus-visible + .header__login, .btn-check:focus-visible + .game__btn-play {
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   -webkit-box-shadow: var(--bs-btn-focus-box-shadow);
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:checked + .btn, .btn-check:checked + .hero__action-button, .btn-check:checked + .header__login, .card-game__item .btn-check:checked + .game__btn-play, :not(.btn-check) + .btn:active, :not(.btn-check) + .hero__action-button:active, :not(.btn-check) + .header__login:active, .card-game__item :not(.btn-check) + .game__btn-play:active, .btn:first-child:active, .hero__action-button:first-child:active, .header__login:first-child:active, .card-game__item .game__btn-play:first-child:active, .btn.active, .active.hero__action-button, .active.header__login, .card-game__item .active.game__btn-play, .btn.show, .show.hero__action-button, .show.header__login, .card-game__item .show.game__btn-play {
+.btn-check:checked + .btn, .btn-check:checked + .btn--icon, .btn-check:checked + .hero__action-button, .btn-check:checked + .header__login, .btn-check:checked + .game__btn-play, :not(.btn-check) + .btn:active, :not(.btn-check) + .btn--icon:active, :not(.btn-check) + .hero__action-button:active, :not(.btn-check) + .header__login:active, :not(.btn-check) + .game__btn-play:active, .btn:first-child:active, .btn--icon:first-child:active, .hero__action-button:first-child:active, .header__login:first-child:active, .game__btn-play:first-child:active, .btn.active, .active.btn--icon, .active.hero__action-button, .active.header__login, .active.game__btn-play, .btn.show, .show.btn--icon, .show.hero__action-button, .show.header__login, .show.game__btn-play {
   color: var(--bs-btn-active-color);
   background-color: var(--bs-btn-active-bg);
   border-color: var(--bs-btn-active-border-color);
 }
-.btn-check:checked + .btn:focus-visible, .btn-check:checked + .hero__action-button:focus-visible, .btn-check:checked + .header__login:focus-visible, .card-game__item .btn-check:checked + .game__btn-play:focus-visible, :not(.btn-check) + .btn:active:focus-visible, :not(.btn-check) + .hero__action-button:active:focus-visible, :not(.btn-check) + .header__login:active:focus-visible, .card-game__item :not(.btn-check) + .game__btn-play:active:focus-visible, .btn:first-child:active:focus-visible, .hero__action-button:first-child:active:focus-visible, .header__login:first-child:active:focus-visible, .card-game__item .game__btn-play:first-child:active:focus-visible, .btn.active:focus-visible, .active.hero__action-button:focus-visible, .active.header__login:focus-visible, .card-game__item .active.game__btn-play:focus-visible, .btn.show:focus-visible, .show.hero__action-button:focus-visible, .show.header__login:focus-visible, .card-game__item .show.game__btn-play:focus-visible {
+.btn-check:checked + .btn:focus-visible, .btn-check:checked + .btn--icon:focus-visible, .btn-check:checked + .hero__action-button:focus-visible, .btn-check:checked + .header__login:focus-visible, .btn-check:checked + .game__btn-play:focus-visible, :not(.btn-check) + .btn:active:focus-visible, :not(.btn-check) + .btn--icon:active:focus-visible, :not(.btn-check) + .hero__action-button:active:focus-visible, :not(.btn-check) + .header__login:active:focus-visible, :not(.btn-check) + .game__btn-play:active:focus-visible, .btn:first-child:active:focus-visible, .btn--icon:first-child:active:focus-visible, .hero__action-button:first-child:active:focus-visible, .header__login:first-child:active:focus-visible, .game__btn-play:first-child:active:focus-visible, .btn.active:focus-visible, .active.btn--icon:focus-visible, .active.hero__action-button:focus-visible, .active.header__login:focus-visible, .active.game__btn-play:focus-visible, .btn.show:focus-visible, .show.btn--icon:focus-visible, .show.hero__action-button:focus-visible, .show.header__login:focus-visible, .show.game__btn-play:focus-visible {
   -webkit-box-shadow: var(--bs-btn-focus-box-shadow);
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn:disabled, .hero__action-button:disabled, .header__login:disabled, .card-game__item .game__btn-play:disabled, .btn.disabled, .disabled.hero__action-button, .disabled.header__login, .card-game__item .disabled.game__btn-play, fieldset:disabled .btn, fieldset:disabled .hero__action-button, fieldset:disabled .header__login, fieldset:disabled .card-game__item .game__btn-play, .card-game__item fieldset:disabled .game__btn-play {
+.btn:disabled, .btn--icon:disabled, .hero__action-button:disabled, .header__login:disabled, .game__btn-play:disabled, .btn.disabled, .disabled.btn--icon, .disabled.hero__action-button, .disabled.header__login, .disabled.game__btn-play, fieldset:disabled .btn, fieldset:disabled .btn--icon, fieldset:disabled .hero__action-button, fieldset:disabled .header__login, fieldset:disabled .game__btn-play {
   color: var(--bs-btn-disabled-color);
   pointer-events: none;
   background-color: var(--bs-btn-disabled-bg);
@@ -3819,7 +3821,7 @@ textarea.form-control-lg {
   opacity: var(--bs-btn-disabled-opacity);
 }
 
-.btn-primary, .header__login, .card-game__item--first .game__btn-play {
+.btn-primary, .btn--icon-primary, .header__login, .card-game__item--first .game__btn-play {
   --bs-btn-color: #fff;
   --bs-btn-bg: #3f8dfd;
   --bs-btn-border-color: #3f8dfd;
@@ -3836,21 +3838,21 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: #3f8dfd;
 }
 
-.btn-secondary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #434343;
-  --bs-btn-border-color: #434343;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #393939;
-  --bs-btn-hover-border-color: #363636;
-  --bs-btn-focus-shadow-rgb: 95, 95, 95;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #363636;
-  --bs-btn-active-border-color: #323232;
+.btn-secondary, .btn--icon-secondary {
+  --bs-btn-color: #000;
+  --bs-btn-bg: #f3f3f4;
+  --bs-btn-border-color: #f3f3f4;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #f5f5f6;
+  --bs-btn-hover-border-color: #f4f4f5;
+  --bs-btn-focus-shadow-rgb: 207, 207, 207;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #f5f5f6;
+  --bs-btn-active-border-color: #f4f4f5;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #434343;
-  --bs-btn-disabled-border-color: #434343;
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #f3f3f4;
+  --bs-btn-disabled-border-color: #f3f3f4;
 }
 
 .btn-success {
@@ -4058,19 +4060,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-secondary {
-  --bs-btn-color: #434343;
-  --bs-btn-border-color: #434343;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #434343;
-  --bs-btn-hover-border-color: #434343;
-  --bs-btn-focus-shadow-rgb: 67, 67, 67;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #434343;
-  --bs-btn-active-border-color: #434343;
+  --bs-btn-color: #f3f3f4;
+  --bs-btn-border-color: #f3f3f4;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #f3f3f4;
+  --bs-btn-hover-border-color: #f3f3f4;
+  --bs-btn-focus-shadow-rgb: 243, 243, 244;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #f3f3f4;
+  --bs-btn-active-border-color: #f3f3f4;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #434343;
+  --bs-btn-disabled-color: #f3f3f4;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #434343;
+  --bs-btn-disabled-border-color: #f3f3f4;
   --bs-gradient: none;
 }
 
@@ -4283,14 +4285,14 @@ textarea.form-control-lg {
   color: var(--bs-btn-hover-color);
 }
 
-.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .hero__action-button, .btn-group-lg > .header__login, .card-game__item .btn-group-lg > .game__btn-play {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .btn--icon, .btn-group-lg > .hero__action-button, .btn-group-lg > .header__login, .btn-group-lg > .game__btn-play {
   --bs-btn-padding-y: 16px;
   --bs-btn-padding-x: 32px;
   --bs-btn-font-size: 0.875rem;
   --bs-btn-border-radius: 0.5rem;
 }
 
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .hero__action-button, .btn-group-sm > .header__login, .card-game__item .btn-group-sm > .game__btn-play {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .btn--icon, .btn-group-sm > .hero__action-button, .btn-group-sm > .header__login, .btn-group-sm > .game__btn-play {
   --bs-btn-padding-y: 12px;
   --bs-btn-padding-x: 24px;
   --bs-btn-font-size: 0.75rem;
@@ -4664,61 +4666,73 @@ textarea.form-control-lg {
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn, .btn-group > .hero__action-button, .btn-group > .header__login, .card-game__item .btn-group > .game__btn-play,
+.btn-group > .btn, .btn-group > .btn--icon, .btn-group > .hero__action-button, .btn-group > .header__login, .btn-group > .game__btn-play,
 .btn-group-vertical > .btn,
+.btn-group-vertical > .btn--icon,
 .btn-group-vertical > .hero__action-button,
 .btn-group-vertical > .header__login,
-.card-game__item .btn-group-vertical > .game__btn-play {
+.btn-group-vertical > .game__btn-play {
   position: relative;
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
-.btn-group > .btn-check:checked + .btn, .btn-group > .btn-check:checked + .hero__action-button, .btn-group > .btn-check:checked + .header__login, .card-game__item .btn-group > .btn-check:checked + .game__btn-play,
+.btn-group > .btn-check:checked + .btn, .btn-group > .btn-check:checked + .btn--icon, .btn-group > .btn-check:checked + .hero__action-button, .btn-group > .btn-check:checked + .header__login, .btn-group > .btn-check:checked + .game__btn-play,
 .btn-group > .btn-check:focus + .btn,
+.btn-group > .btn-check:focus + .btn--icon,
 .btn-group > .btn-check:focus + .hero__action-button,
 .btn-group > .btn-check:focus + .header__login,
-.card-game__item .btn-group > .btn-check:focus + .game__btn-play,
+.btn-group > .btn-check:focus + .game__btn-play,
 .btn-group > .btn:hover,
+.btn-group > .btn--icon:hover,
 .btn-group > .hero__action-button:hover,
 .btn-group > .header__login:hover,
-.card-game__item .btn-group > .game__btn-play:hover,
+.btn-group > .game__btn-play:hover,
 .btn-group > .btn:focus,
+.btn-group > .btn--icon:focus,
 .btn-group > .hero__action-button:focus,
 .btn-group > .header__login:focus,
-.card-game__item .btn-group > .game__btn-play:focus,
+.btn-group > .game__btn-play:focus,
 .btn-group > .btn:active,
+.btn-group > .btn--icon:active,
 .btn-group > .hero__action-button:active,
 .btn-group > .header__login:active,
-.card-game__item .btn-group > .game__btn-play:active,
+.btn-group > .game__btn-play:active,
 .btn-group > .btn.active,
+.btn-group > .active.btn--icon,
 .btn-group > .active.hero__action-button,
 .btn-group > .active.header__login,
-.card-game__item .btn-group > .active.game__btn-play,
+.btn-group > .active.game__btn-play,
 .btn-group-vertical > .btn-check:checked + .btn,
+.btn-group-vertical > .btn-check:checked + .btn--icon,
 .btn-group-vertical > .btn-check:checked + .hero__action-button,
 .btn-group-vertical > .btn-check:checked + .header__login,
-.card-game__item .btn-group-vertical > .btn-check:checked + .game__btn-play,
+.btn-group-vertical > .btn-check:checked + .game__btn-play,
 .btn-group-vertical > .btn-check:focus + .btn,
+.btn-group-vertical > .btn-check:focus + .btn--icon,
 .btn-group-vertical > .btn-check:focus + .hero__action-button,
 .btn-group-vertical > .btn-check:focus + .header__login,
-.card-game__item .btn-group-vertical > .btn-check:focus + .game__btn-play,
+.btn-group-vertical > .btn-check:focus + .game__btn-play,
 .btn-group-vertical > .btn:hover,
+.btn-group-vertical > .btn--icon:hover,
 .btn-group-vertical > .hero__action-button:hover,
 .btn-group-vertical > .header__login:hover,
-.card-game__item .btn-group-vertical > .game__btn-play:hover,
+.btn-group-vertical > .game__btn-play:hover,
 .btn-group-vertical > .btn:focus,
+.btn-group-vertical > .btn--icon:focus,
 .btn-group-vertical > .hero__action-button:focus,
 .btn-group-vertical > .header__login:focus,
-.card-game__item .btn-group-vertical > .game__btn-play:focus,
+.btn-group-vertical > .game__btn-play:focus,
 .btn-group-vertical > .btn:active,
+.btn-group-vertical > .btn--icon:active,
 .btn-group-vertical > .hero__action-button:active,
 .btn-group-vertical > .header__login:active,
-.card-game__item .btn-group-vertical > .game__btn-play:active,
+.btn-group-vertical > .game__btn-play:active,
 .btn-group-vertical > .btn.active,
+.btn-group-vertical > .active.btn--icon,
 .btn-group-vertical > .active.hero__action-button,
 .btn-group-vertical > .active.header__login,
-.card-game__item .btn-group-vertical > .active.game__btn-play {
+.btn-group-vertical > .active.game__btn-play {
   z-index: 1;
 }
 
@@ -4739,31 +4753,35 @@ textarea.form-control-lg {
 .btn-group {
   border-radius: 0.625rem;
 }
-.btn-group > :not(.btn-check:first-child) + .btn, .btn-group > :not(.btn-check:first-child) + .hero__action-button, .btn-group > :not(.btn-check:first-child) + .header__login, .card-game__item .btn-group > :not(.btn-check:first-child) + .game__btn-play,
+.btn-group > :not(.btn-check:first-child) + .btn, .btn-group > :not(.btn-check:first-child) + .btn--icon, .btn-group > :not(.btn-check:first-child) + .hero__action-button, .btn-group > :not(.btn-check:first-child) + .header__login, .btn-group > :not(.btn-check:first-child) + .game__btn-play,
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle):not(.page-menu__item--dropdown), .btn-group > .hero__action-button:not(:last-child):not(.dropdown-toggle):not(.page-menu__item--dropdown), .btn-group > .header__login:not(:last-child):not(.dropdown-toggle):not(.page-menu__item--dropdown), .card-game__item .btn-group > .game__btn-play:not(:last-child):not(.dropdown-toggle):not(.page-menu__item--dropdown),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle):not(.page-menu__item--dropdown), .btn-group > .btn--icon:not(:last-child):not(.dropdown-toggle):not(.page-menu__item--dropdown), .btn-group > .hero__action-button:not(:last-child):not(.dropdown-toggle):not(.page-menu__item--dropdown), .btn-group > .header__login:not(:last-child):not(.dropdown-toggle):not(.page-menu__item--dropdown), .btn-group > .game__btn-play:not(:last-child):not(.dropdown-toggle):not(.page-menu__item--dropdown),
 .btn-group > .btn.dropdown-toggle-split:first-child,
+.btn-group > .dropdown-toggle-split.btn--icon:first-child,
 .btn-group > .dropdown-toggle-split.hero__action-button:first-child,
 .btn-group > .dropdown-toggle-split.header__login:first-child,
-.card-game__item .btn-group > .dropdown-toggle-split.game__btn-play:first-child,
+.btn-group > .dropdown-toggle-split.game__btn-play:first-child,
 .btn-group > .btn-group:not(:last-child) > .btn,
+.btn-group > .btn-group:not(:last-child) > .btn--icon,
 .btn-group > .btn-group:not(:last-child) > .hero__action-button,
 .btn-group > .btn-group:not(:last-child) > .header__login,
-.card-game__item .btn-group > .btn-group:not(:last-child) > .game__btn-play {
+.btn-group > .btn-group:not(:last-child) > .game__btn-play {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:nth-child(n+3), .btn-group > .hero__action-button:nth-child(n+3), .btn-group > .header__login:nth-child(n+3), .card-game__item .btn-group > .game__btn-play:nth-child(n+3),
+.btn-group > .btn:nth-child(n+3), .btn-group > .btn--icon:nth-child(n+3), .btn-group > .hero__action-button:nth-child(n+3), .btn-group > .header__login:nth-child(n+3), .btn-group > .game__btn-play:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
+.btn-group > :not(.btn-check) + .btn--icon,
 .btn-group > :not(.btn-check) + .hero__action-button,
 .btn-group > :not(.btn-check) + .header__login,
-.card-game__item .btn-group > :not(.btn-check) + .game__btn-play,
+.btn-group > :not(.btn-check) + .game__btn-play,
 .btn-group > .btn-group:not(:first-child) > .btn,
+.btn-group > .btn-group:not(:first-child) > .btn--icon,
 .btn-group > .btn-group:not(:first-child) > .hero__action-button,
 .btn-group > .btn-group:not(:first-child) > .header__login,
-.card-game__item .btn-group > .btn-group:not(:first-child) > .game__btn-play {
+.btn-group > .btn-group:not(:first-child) > .game__btn-play {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -4779,12 +4797,12 @@ textarea.form-control-lg {
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .hero__action-button + .dropdown-toggle-split, .btn-group-sm > .header__login + .dropdown-toggle-split, .card-game__item .btn-group-sm > .game__btn-play + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .btn--icon + .dropdown-toggle-split, .btn-group-sm > .hero__action-button + .dropdown-toggle-split, .btn-group-sm > .header__login + .dropdown-toggle-split, .btn-group-sm > .game__btn-play + .dropdown-toggle-split {
   padding-right: 18px;
   padding-left: 18px;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .hero__action-button + .dropdown-toggle-split, .btn-group-lg > .header__login + .dropdown-toggle-split, .card-game__item .btn-group-lg > .game__btn-play + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .btn--icon + .dropdown-toggle-split, .btn-group-lg > .hero__action-button + .dropdown-toggle-split, .btn-group-lg > .header__login + .dropdown-toggle-split, .btn-group-lg > .game__btn-play + .dropdown-toggle-split {
   padding-right: 24px;
   padding-left: 24px;
 }
@@ -4801,27 +4819,29 @@ textarea.form-control-lg {
   -ms-flex-pack: center;
   justify-content: center;
 }
-.btn-group-vertical > .btn, .btn-group-vertical > .hero__action-button, .btn-group-vertical > .header__login, .card-game__item .btn-group-vertical > .game__btn-play,
+.btn-group-vertical > .btn, .btn-group-vertical > .btn--icon, .btn-group-vertical > .hero__action-button, .btn-group-vertical > .header__login, .btn-group-vertical > .game__btn-play,
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .hero__action-button:not(:first-child), .btn-group-vertical > .header__login:not(:first-child), .card-game__item .btn-group-vertical > .game__btn-play:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .btn--icon:not(:first-child), .btn-group-vertical > .hero__action-button:not(:first-child), .btn-group-vertical > .header__login:not(:first-child), .btn-group-vertical > .game__btn-play:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle):not(.page-menu__item--dropdown), .btn-group-vertical > .hero__action-button:not(:last-child):not(.dropdown-toggle):not(.page-menu__item--dropdown), .btn-group-vertical > .header__login:not(:last-child):not(.dropdown-toggle):not(.page-menu__item--dropdown), .card-game__item .btn-group-vertical > .game__btn-play:not(:last-child):not(.dropdown-toggle):not(.page-menu__item--dropdown),
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle):not(.page-menu__item--dropdown), .btn-group-vertical > .btn--icon:not(:last-child):not(.dropdown-toggle):not(.page-menu__item--dropdown), .btn-group-vertical > .hero__action-button:not(:last-child):not(.dropdown-toggle):not(.page-menu__item--dropdown), .btn-group-vertical > .header__login:not(:last-child):not(.dropdown-toggle):not(.page-menu__item--dropdown), .btn-group-vertical > .game__btn-play:not(:last-child):not(.dropdown-toggle):not(.page-menu__item--dropdown),
 .btn-group-vertical > .btn-group:not(:last-child) > .btn,
+.btn-group-vertical > .btn-group:not(:last-child) > .btn--icon,
 .btn-group-vertical > .btn-group:not(:last-child) > .hero__action-button,
 .btn-group-vertical > .btn-group:not(:last-child) > .header__login,
-.card-game__item .btn-group-vertical > .btn-group:not(:last-child) > .game__btn-play {
+.btn-group-vertical > .btn-group:not(:last-child) > .game__btn-play {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn ~ .btn, .btn-group-vertical > .hero__action-button ~ .btn, .btn-group-vertical > .btn ~ .hero__action-button, .btn-group-vertical > .hero__action-button ~ .hero__action-button, .btn-group-vertical > .header__login ~ .btn, .btn-group-vertical > .header__login ~ .hero__action-button, .btn-group-vertical > .btn ~ .header__login, .btn-group-vertical > .hero__action-button ~ .header__login, .btn-group-vertical > .header__login ~ .header__login, .card-game__item .btn-group-vertical > .game__btn-play ~ .btn, .card-game__item .btn-group-vertical > .game__btn-play ~ .hero__action-button, .card-game__item .btn-group-vertical > .game__btn-play ~ .header__login, .card-game__item .btn-group-vertical > .btn ~ .game__btn-play, .card-game__item .btn-group-vertical > .hero__action-button ~ .game__btn-play, .card-game__item .btn-group-vertical > .header__login ~ .game__btn-play, .card-game__item .btn-group-vertical > .game__btn-play ~ .game__btn-play,
+.btn-group-vertical > .btn ~ .btn, .btn-group-vertical > .btn--icon ~ .btn, .btn-group-vertical > .btn ~ .btn--icon, .btn-group-vertical > .btn--icon ~ .btn--icon, .btn-group-vertical > .hero__action-button ~ .btn, .btn-group-vertical > .hero__action-button ~ .btn--icon, .btn-group-vertical > .btn ~ .hero__action-button, .btn-group-vertical > .btn--icon ~ .hero__action-button, .btn-group-vertical > .hero__action-button ~ .hero__action-button, .btn-group-vertical > .header__login ~ .btn, .btn-group-vertical > .header__login ~ .btn--icon, .btn-group-vertical > .header__login ~ .hero__action-button, .btn-group-vertical > .btn ~ .header__login, .btn-group-vertical > .btn--icon ~ .header__login, .btn-group-vertical > .hero__action-button ~ .header__login, .btn-group-vertical > .header__login ~ .header__login, .btn-group-vertical > .game__btn-play ~ .btn, .btn-group-vertical > .game__btn-play ~ .btn--icon, .btn-group-vertical > .game__btn-play ~ .hero__action-button, .btn-group-vertical > .game__btn-play ~ .header__login, .btn-group-vertical > .btn ~ .game__btn-play, .btn-group-vertical > .btn--icon ~ .game__btn-play, .btn-group-vertical > .hero__action-button ~ .game__btn-play, .btn-group-vertical > .header__login ~ .game__btn-play, .btn-group-vertical > .game__btn-play ~ .game__btn-play,
 .btn-group-vertical > .btn-group:not(:first-child) > .btn,
+.btn-group-vertical > .btn-group:not(:first-child) > .btn--icon,
 .btn-group-vertical > .btn-group:not(:first-child) > .hero__action-button,
 .btn-group-vertical > .btn-group:not(:first-child) > .header__login,
-.card-game__item .btn-group-vertical > .btn-group:not(:first-child) > .game__btn-play {
+.btn-group-vertical > .btn-group:not(:first-child) > .game__btn-play {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -5718,7 +5738,7 @@ textarea.form-control-lg {
 
 .accordion {
   --bs-accordion-color: var(--bs-body-color);
-  --bs-accordion-bg: #e3e3e4;
+  --bs-accordion-bg: #fff;
   --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
   --bs-accordion-border-color: var(--bs-border-color);
   --bs-accordion-border-width: 1px;
@@ -6021,7 +6041,7 @@ textarea.form-control-lg {
   display: none;
 }
 
-.btn .badge, .hero__action-button .badge, .header__login .badge, .card-game__item .game__btn-play .badge {
+.btn .badge, .btn--icon .badge, .hero__action-button .badge, .header__login .badge, .game__btn-play .badge {
   position: relative;
   top: -1px;
 }
@@ -6073,12 +6093,12 @@ textarea.form-control-lg {
 }
 
 .alert-secondary {
-  --bs-alert-color: #282828;
-  --bs-alert-bg: #d9d9d9;
-  --bs-alert-border-color: #c7c7c7;
+  --bs-alert-color: #616162;
+  --bs-alert-bg: #fdfdfd;
+  --bs-alert-border-color: #fbfbfc;
 }
 .alert-secondary .alert-link {
-  color: #202020;
+  color: #4e4e4e;
 }
 
 .alert-success {
@@ -6529,17 +6549,17 @@ textarea.form-control-lg {
 }
 
 .list-group-item-secondary {
-  color: #282828;
-  background-color: #d9d9d9;
+  color: #616162;
+  background-color: #fdfdfd;
 }
 .list-group-item-secondary.list-group-item-action:hover, .list-group-item-secondary.list-group-item-action:focus {
-  color: #282828;
-  background-color: #c3c3c3;
+  color: #616162;
+  background-color: #e4e4e4;
 }
 .list-group-item-secondary.list-group-item-action.active {
   color: #fff;
-  background-color: #282828;
-  border-color: #282828;
+  background-color: #616162;
+  border-color: #616162;
 }
 
 .list-group-item-success {
@@ -8381,7 +8401,7 @@ textarea.form-control-lg {
   background-color: currentcolor;
   opacity: 0.5;
 }
-.placeholder.btn::before, .placeholder.hero__action-button::before, .placeholder.header__login::before, .card-game__item .placeholder.game__btn-play::before {
+.placeholder.btn::before, .placeholder.btn--icon::before, .placeholder.hero__action-button::before, .placeholder.header__login::before, .placeholder.game__btn-play::before {
   display: inline-block;
   content: "";
 }
@@ -8448,8 +8468,8 @@ textarea.form-control-lg {
 }
 
 .text-bg-secondary {
-  color: #fff !important;
-  background-color: RGBA(67, 67, 67, var(--bs-bg-opacity, 1)) !important;
+  color: #000 !important;
+  background-color: RGBA(243, 243, 244, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-success {
@@ -8515,10 +8535,10 @@ textarea.form-control-lg {
 }
 
 .link-secondary {
-  color: #434343 !important;
+  color: #f3f3f4 !important;
 }
 .link-secondary:hover, .link-secondary:focus {
-  color: #363636 !important;
+  color: #f5f5f6 !important;
 }
 
 .link-success {
@@ -8772,7 +8792,7 @@ textarea.form-control-lg {
   content: "";
 }
 
-.text-truncate, .card-game__item .game-title {
+.text-truncate, .game-title {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -8888,7 +8908,7 @@ textarea.form-control-lg {
   display: table-cell !important;
 }
 
-.d-flex, .section__header, .page-menu, .navbar__mobile, .footer__copyright-sosmed-wrapper, .footer__sosmed-wrapper, .card-game__item .category__list, .game-of-the-week .section__header, .category-game__item, .category-game__list, .category-game {
+.d-flex, .section__header, .page-menu, .navbar__mobile, .game-info__actions .action-wrapper, .footer__copyright-sosmed-wrapper, .footer__sosmed-wrapper, .category__list, .game-of-the-week .section__header, .category-game__item, .category-game__list, .category-game {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -9002,7 +9022,7 @@ textarea.form-control-lg {
   transform: translateX(-50%) !important;
 }
 
-.translate-middle-y {
+.translate-middle-y, .form-input--comments .btn-post__wrapper {
   -webkit-transform: translateY(-50%) !important;
   transform: translateY(-50%) !important;
 }
@@ -9169,7 +9189,7 @@ textarea.form-control-lg {
   width: 75% !important;
 }
 
-.w-100, .navbar__mobile, .card-game__item .game__btn-play, .category-game {
+.w-100, .navbar__mobile, .game__btn-play, .category-game {
   width: 100% !important;
 }
 
@@ -9277,7 +9297,7 @@ textarea.form-control-lg {
   flex-shrink: 1 !important;
 }
 
-.flex-wrap, .card-game__item .category__list, .category-game__list {
+.flex-wrap, .category__list, .category-game__list {
   -ms-flex-wrap: wrap !important;
   flex-wrap: wrap !important;
 }
@@ -9339,7 +9359,7 @@ textarea.form-control-lg {
   align-items: flex-end !important;
 }
 
-.align-items-center, .section__header, .page-menu, .card-game__item .category__list, .category-game {
+.align-items-center, .section__header, .page-menu, .category__list, .category-game {
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
@@ -9685,7 +9705,7 @@ textarea.form-control-lg {
   margin-right: auto !important;
 }
 
-.mb-0, .card-game__item .game-rating__value {
+.mb-0, .game-rating__value {
   margin-bottom: 0 !important;
 }
 
@@ -9733,7 +9753,7 @@ textarea.form-control-lg {
   margin-left: 0.25rem !important;
 }
 
-.ms-2, .card-game__item .game-rating__value {
+.ms-2, .game-rating__value {
   margin-left: 0.5rem !important;
 }
 
@@ -10043,11 +10063,11 @@ textarea.form-control-lg {
   gap: 0.25rem !important;
 }
 
-.gap-2, .card-game__item .category__list {
+.gap-2, .category__list {
   gap: 0.5rem !important;
 }
 
-.gap-3, .game-info__actions, .category-game__list {
+.gap-3, .game-info__actions .action-wrapper, .category-game__list {
   gap: 1rem !important;
 }
 
@@ -10099,7 +10119,7 @@ textarea.form-control-lg {
   font-size: 1rem !important;
 }
 
-.fs-7, .card-game__item .game-rating__value {
+.fs-7, .game-rating__value {
   font-size: 0.875rem !important;
 }
 
@@ -10147,7 +10167,7 @@ textarea.form-control-lg {
   line-height: 1.25 !important;
 }
 
-.lh-base, .card-game__item .category__item, .card-game__item .game-title {
+.lh-base, .game-title, .category__item {
   line-height: 1.5 !important;
 }
 
@@ -10487,7 +10507,7 @@ textarea.form-control-lg {
   border-radius: 1.5625rem !important;
 }
 
-.rounded-circle {
+.rounded-circle, .comment-wrapper .comment__author-avatar {
   border-radius: 50% !important;
 }
 
@@ -12733,7 +12753,7 @@ textarea.form-control-lg {
   .fs-lg-5 {
     font-size: 1.25rem !important;
   }
-  .fs-lg-6, .card-game__item .game-rating__value {
+  .fs-lg-6, .game-rating__value {
     font-size: 1rem !important;
   }
   .fs-lg-7 {
@@ -14287,6 +14307,18 @@ a {
   text-decoration: none;
 }
 
+.accordion-title {
+  font-size: 16px;
+  padding: 16px 20px;
+  color: #14243c;
+  display: block;
+  font-weight: 400;
+}
+
+.accordion-button:hover {
+  color: var(--bs-link-hover-color);
+}
+
 .btn-close {
   background-color: #fff;
   margin-left: auto;
@@ -14297,6 +14329,14 @@ a {
 }
 .card-body {
   padding: 20px;
+}
+.card.card--comments, .card--comments.card-game__item {
+  border: 1px solid #e0edff;
+  border-radius: 20px;
+  margin-top: 12px;
+}
+.card.card--comments .card-body, .card--comments.card-game__item .card-body {
+  padding: 25px;
 }
 
 .category-game {
@@ -14328,6 +14368,48 @@ a {
     padding: 40px;
   }
 }
+.category__list--card {
+  margin-top: 16px;
+}
+@media (min-width: 992px) {
+  .category__list--card {
+    margin-top: 32px;
+  }
+}
+.category__item {
+  color: white;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+@media (min-width: 992px) {
+  .category__item {
+    font-size: 16px;
+  }
+}
+.category__item--action {
+  background-color: #f34f8c;
+}
+.category__item--adventure {
+  background-color: #c564f9;
+}
+.category__item--fun {
+  background-color: #fe8008;
+}
+.category__item--galaxy {
+  background-color: #4e3ea1;
+}
+.category__item--horror {
+  background-color: #6f7281;
+}
+.category__item--strategy {
+  background-color: #1dbf85;
+}
+.category__item--more {
+  color: #97abc7;
+  padding: 0;
+}
+
 .card-game__item {
   background: rgb(255, 255, 255);
   -webkit-box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.07);
@@ -14340,105 +14422,8 @@ a {
     padding: 30px;
   }
 }
-.card-game__item .game__btn-play {
-  padding: 16px 0;
-  border-radius: 15px;
-}
-.card-game__item .game-image {
-  height: 100%;
-  border-radius: 20px;
-  max-width: 110px;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-@media (min-width: 992px) {
-  .card-game__item .game-image {
-    max-width: 136px;
-  }
-}
-.card-game__item .game-rating__value {
-  color: #97abc7;
-}
-.card-game__item .game-title {
-  color: #14243c;
-  margin-bottom: 10px;
-  font-size: 20px;
-  font-weight: 600;
-}
-@media (min-width: 992px) {
-  .card-game__item .game-title {
-    font-size: 25px;
-  }
-}
 .card-game__item .game-viewers {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 6px;
-  padding: 5px 10px;
-  gap: 5px;
   margin-right: 20px;
-  font-size: 13px;
-  color: #97abc7;
-  background: rgba(20, 36, 60, 0.05);
-  border: 1px solid rgba(20, 36, 60, 0.1);
-}
-.card-game__item .game-viewers::before {
-  content: "";
-  background-image: url("../icons/ic-views-active.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 27px;
-  height: 27px;
-}
-.card-game__item .category__list {
-  margin-top: 16px;
-}
-@media (min-width: 992px) {
-  .card-game__item .category__list {
-    margin-top: 32px;
-  }
-}
-.card-game__item .category__item {
-  color: white;
-  padding: 8px 15px;
-  border-radius: 10px;
-  font-size: 14px;
-}
-@media (min-width: 992px) {
-  .card-game__item .category__item {
-    font-size: 16px;
-  }
-}
-.card-game__item .category__item--action {
-  background-color: #f34f8c;
-}
-.card-game__item .category__item--adventure {
-  background-color: #c564f9;
-}
-.card-game__item .category__item--fun {
-  background-color: #fe8008;
-}
-.card-game__item .category__item--galaxy {
-  background-color: #4e3ea1;
-}
-.card-game__item .category__item--horror {
-  background-color: #6f7281;
-}
-.card-game__item .category__item--strategy {
-  background-color: #1dbf85;
-}
-.card-game__item .category__item--more {
-  color: #97abc7;
-  padding: 0;
 }
 .card-game__item--first {
   grid-row: 1/span 2;
@@ -14580,6 +14565,30 @@ a {
 .card-game__item--landscape:hover {
   background-color: #f8f8f8;
 }
+.form-input--comments {
+  position: relative;
+}
+.form-input--comments > .form-control, .form-input--comments > .header__site-search {
+  padding: 15px;
+  font-size: 20px;
+  border: 1px solid rgba(20, 36, 60, 0.1);
+}
+.form-input--comments .btn-post__wrapper {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+.form-input--comments .btn--post {
+  background-color: #97abc7;
+  color: white;
+  padding: 8px 15px;
+  margin-right: 10px;
+}
+.form-input--comments .btn--post:hover {
+  background-color: #617799;
+  color: white;
+}
+
 .footer__desc {
   font-size: 13px;
 }
@@ -14595,7 +14604,66 @@ a {
   font-size: 30px;
 }
 
-.game-info__actions {
+.game__btn-play {
+  padding: 16px 0;
+  border-radius: 15px;
+}
+.game-image {
+  height: 100%;
+  border-radius: 20px;
+  max-width: 110px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+@media (min-width: 992px) {
+  .game-image {
+    max-width: 136px;
+  }
+}
+.game-rating__value {
+  color: #97abc7;
+}
+.game-title {
+  color: #14243c;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+@media (min-width: 992px) {
+  .game-title {
+    font-size: 25px;
+  }
+}
+.game-viewers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  padding: 5px 10px;
+  gap: 5px;
+  font-size: 13px;
+  color: #97abc7;
+  background: rgba(20, 36, 60, 0.05);
+  border: 1px solid rgba(20, 36, 60, 0.1);
+}
+.game-viewers::before {
+  content: "";
+  background-image: url("../icons/ic-views-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 27px;
+  height: 27px;
+}
+
+.game-info__actions .action-wrapper {
   margin-top: 30px;
 }
 .game-info__poster {
@@ -14716,6 +14784,20 @@ a {
   }
 }
 
+.btn--icon {
+  padding: 10px;
+}
+.btn--icon .icon {
+  width: 24px;
+  height: 24px;
+}
+.btn--icon-primary {
+  border-color: #3b83ea;
+}
+.btn--icon-secondary {
+  border-color: #dddfe2;
+}
+
 .navbar__wrapper {
   background-color: #fff;
 }
@@ -14723,6 +14805,9 @@ a {
 .page-menu {
   height: 60px;
   gap: 40px;
+}
+.page-menu__item {
+  position: relative;
 }
 .profile {
   margin-left: 10px;
@@ -14763,4 +14848,103 @@ a {
   .section__title {
     font-size: 40px;
   }
+}
+
+.description__title {
+  margin: 40px 0 0;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 38px;
+}
+.description__text {
+  margin: 10px 0 0;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.instruction__title {
+  margin: 40px 0 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 38px;
+}
+.instruction__text {
+  margin: 10px 0 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.comments__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.comments__title {
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 38px;
+}
+.comments__filter {
+  margin-left: auto;
+}
+.comments__filter > .form-select {
+  color: #97abc7;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2397abc7' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  font-weight: 500;
+}
+.comments__actions {
+  text-align: center;
+  margin-top: 10px;
+}
+.comments__actions .comments__link {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #3f8dfd;
+}
+.comments__actions .comments__link:hover {
+  color: #3f8dfd;
+  opacity: 0.9;
+}
+
+.comment-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+}
+.comment-wrapper .comment__author-avatar {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  aspect-ratio: 1/1;
+}
+.comment-wrapper .comment__content-wrapper {
+  margin-left: 15px;
+}
+.comment-wrapper .comment__author-name {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 0;
+}
+.comment-wrapper .comment__date {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #97abc7;
+}
+.comment-wrapper .comment__content {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 10px;
 }
